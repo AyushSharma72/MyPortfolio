@@ -5,20 +5,206 @@
 html {
   scroll-behavior: smooth;
 }
-.active {
-  color: #1450a3;
+
+:root {
+  --purple-color: #8721da;
+}
+.bluegradient {
+  /* background: linear-gradient(220.55deg, #a531dc 0%, #5f05f1 100%); */
+
+  background: linear-gradient(220.55deg, #ff5eef 0%, #456eff 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body {
+  background-image: radial-gradient(
+    circle 815px at 23.4% -21.8%,
+    rgba(9, 29, 85, 1) 0.2%,
+    rgba(0, 0, 0, 0.992) 100.2%
+  );
+  /* background-color: rgba(0, 0, 0, 0.909); */
 }
 
-
-.navbar a::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 3px;
-  background: #1450a3;
-  transition: width 0.3s;
+.navbar a {
+  color: rgba(255, 255, 255, 0.719);
+  transition:
+    color 0.2s,
+    transform 0.2s;
+}
+.navbar a:hover {
+  color: white;
 }
 
-.navbar a:hover::after {
+.graycolor {
+  color: rgba(255, 255, 255, 0.558);
+}
+
+.download-btn {
+  height: 45px;
+  width: 130px;
+  cursor: pointer;
+  background: white;
+  border: none;
+  background: var(--purple-color);
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.button-content {
+  transform: translateY(-45px);
+  transition: transform 250ms ease-in-out;
+}
+
+.svg-container,
+.text-container {
+  height: 45px;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-container .text {
+  font-size: 13px;
+  color: #fff;
+  font-weight: 600;
+  opacity: 1;
+  transition: opacity ease-in-out 250ms;
+}
+
+.download-icon {
+  height: 25px;
+  width: 25px;
+  fill: #fff;
+  opacity: 0;
+  transition: opacity ease-in-out 250ms;
+}
+
+/* hover state for the button */
+.download-btn:hover .button-content {
+  transform: translateY(0px);
+}
+
+.download-btn:hover .text {
+  opacity: 0;
+}
+
+.download-btn:hover .download-icon {
+  opacity: 1;
+}
+
+.download-btn:hover .download-icon {
+  -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+  animation: heartbeat 1.5s ease-in-out infinite both;
+}
+
+@-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+
+/* hover state for the button */
+
+/* get in touch button  */
+.getintouch {
+  display: inline-block;
+  border-radius: 8px;
+  background-color: var(--purple-color);
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 17px;
+
+  width: 130px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.getintouch span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.getintouch span:after {
+  content: "»";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.5s;
+}
+
+.getintouch:hover span {
+  padding-right: 15px;
+}
+
+.getintouch:hover span:after {
+  opacity: 1;
+  right: 0;
 }
