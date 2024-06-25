@@ -6,40 +6,50 @@ import { useFrame } from "@react-three/fiber";
 export function Avatar(props) {
   const { nodes, materials } = useGLTF("modal/Ayush.glb");
   const group = useRef();
-  const { animations: Greet } = useFBX("animations/Greet.fbx");
+  const { animations: Hands } = useFBX("animations/Hands.fbx");
   const { animations: netural } = useFBX("animations/netural.fbx");
 
-  Greet[0].name = "Greet";
+  Hands[0].name = "Hands";
   netural[0].name = "netural";
 
-  const { actions, mixer } = useAnimations([...Greet, ...netural], group);
+  const { actions, mixer } = useAnimations([...Hands, ...netural], group);
 
   const target = useRef(new THREE.Vector3(0, 1, 1)); // Initial target position
   const currentPosition = useRef(new THREE.Vector3(0, 1, 1)); // Current interpolated position
 
-  // useFrame((state) => {
-  //   const mouseX = state.mouse.x / 8; // Adjust intensity of movement
+  const stopped = useRef(false); // Use ref to store the stopped state
 
-  //   target.current.set(mouseX, 1, 1);
-  //   currentPosition.current.lerp(target.current, 0.05); // Smooth interpolation
+  useFrame((state) => {
+    if (stopped.current) {
+      const mouseX = state.mouse.x / 8; // Adjust intensity of movement
 
-  //   group.current.getObjectByName("Spine").lookAt(currentPosition.current);
-  // });
+      target.current.set(mouseX, 1, 1);
+      currentPosition.current.lerp(target.current, 0.05); // Smooth interpolation
+
+      group.current.getObjectByName("Spine").lookAt(currentPosition.current);
+    }
+  });
 
   useEffect(() => {
-    const greetAction = actions["Greet"];
+    const HandsAction = actions["Hands"];
     const neturalAction = actions["netural"];
 
-    greetAction.setLoop(THREE.LoopOnce);
-    greetAction.clampWhenFinished = true;
-    greetAction.reset().fadeIn(0.3).play();
+    HandsAction.setLoop(THREE.LoopOnce);
+    HandsAction.clampWhenFinished = true;
+    HandsAction.reset().fadeIn(0.3).play();
 
     mixer.addEventListener("finished", (e) => {
-      if (e.action === greetAction) {
+      if (e.action === HandsAction) {
+        stopped.current = true; // Update ref instead of state
         neturalAction.setLoop(THREE.LoopRepeat);
         neturalAction.reset().fadeIn(0.5).play();
       }
     });
+
+    // Cleanup event listener on component unmount
+    return () => {
+      mixer.removeEventListener("finished", () => {});
+    };
   }, [actions, mixer]);
 
   return (

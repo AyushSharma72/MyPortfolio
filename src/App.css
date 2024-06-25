@@ -24,15 +24,25 @@ body {
   );
   /* background-color: rgba(0, 0, 0, 0.909); */
 }
-
+.active {
+  border-bottom: 3px solid white;
+  color: white !important;
+}
+.navbar {
+  background-color: rgba(0, 0, 0, 0.382);
+}
 .navbar a {
   color: rgba(255, 255, 255, 0.719);
-  transition:
-    color 0.2s,
-    transform 0.2s;
+  transition: color 0.2s;
 }
 .navbar a:hover {
   color: white;
+}
+
+/* small navbar */
+.css-ciy9n4-MuiPaper-root-MuiAppBar-root,
+.css-jzk4qw-MuiPaper-root-MuiAppBar-root {
+  background-color: rgba(0, 0, 0, 0.382) !important;
 }
 
 .graycolor {
