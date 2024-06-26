@@ -6,7 +6,7 @@ import { Avatar } from "./avatar";
 const Home = () => {
   return (
     <div
-      className=" h-[630px] w-[100%] px-3 sm:w-[76%] flex m-auto md:mt-[7rem] mt-[5rem] gap-x-2 sm:gap-0"
+      className=" h-[600px] w-[100%] px-3 sm:w-[76%] flex m-auto md:mt-[7rem] mt-[5rem] gap-x-2 sm:gap-0"
       id="home"
     >
       {/* herosectiontext */}
@@ -32,7 +32,7 @@ const Home = () => {
       <div className="sm:h-full sm:w-[35%] sm:mt-0 h-3/4 mt-[3rem]  w-[30%] ">
         <Canvas shadows>
           <group position-y={-1} rotation={[Math.PI / 9, 0, 0]}>
-            <Avatar scale={[2.3, 2, 2]} />
+            <Avatar scale={[2.3, 2, 2.3]} />
           </group>
           {/* <OrbitControls></OrbitControls> */}
           <ambientLight intensity={2}></ambientLight>

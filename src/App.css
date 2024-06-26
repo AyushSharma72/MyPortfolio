@@ -48,7 +48,9 @@ body {
 .graycolor {
   color: rgba(255, 255, 255, 0.558);
 }
-
+.FontGrayColor {
+  color: rgba(9, 1, 1, 0.636);
+}
 .download-btn {
   height: 45px;
   width: 130px;
@@ -217,4 +219,29 @@ body {
 .getintouch:hover span:after {
   opacity: 1;
   right: 0;
+}
+
+.cardborder {
+  border: 2px solid; /* Corrected 'soild' to 'solid' */
+  border-image: linear-gradient(220.55deg, #ff5eef 0%, #456eff 100%) 1;
+  border-image-slice: 1;
+}
+
+/* scrollbtn */
+
+@keyframes scroll-down {
+  0%, 100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+
+  35% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+
+  70% {
+    transform: translateY(-1rem);
+    opacity: 0;
+  }
 }

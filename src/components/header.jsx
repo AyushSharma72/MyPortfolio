@@ -54,7 +54,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 const Header = () => {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
-  const [hash, Sethash] = useState("Home");
+  const [hash, setHash] = useState("Home");
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -74,37 +74,62 @@ const Header = () => {
     });
   };
 
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const yOffset = -100; // Offset value in pixels
+      const yPosition =
+        element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: yPosition, behavior: "smooth" });
+      setHash(id);
+    }
+  };
+
   useEffect(() => {
     checkActivePage();
   }, [hash]);
 
   return (
     <div>
-      <div className="navbar w-[100%]  py-3 fixed top-0 left-0 right-0  z-10 hidden md:block">
-        <div className="lg:w-[81%] lg:flex md:w-full md:flex  justify-between items-center mx-auto ">
-          <div className="w-3/4 flex  justify-around">
-            <div className=" text-3xl font-bold text-white">
-              {/* <img  src=''></img> */}
+      <div className="navbar w-[100%] py-3 fixed top-0 left-0 right-0 z-10 hidden md:block">
+        <div className="lg:w-[81%] lg:flex md:w-full md:flex justify-between items-center mx-auto">
+          <div className="w-3/4 flex justify-around">
+            <div className="text-3xl font-bold text-white">
               Ayush <span className="bluegradient">Sharma</span>
             </div>
-            <div className="w-[60%] flex justify-around  mt-2 font-bold">
-              <a href="#home" onClick={() => Sethash("home")} name="home">
+            <div className="w-[60%] flex justify-around mt-2 font-bold cursor-pointer">
+              <a
+                onClick={() => {
+                  scrollToSection("home");
+                  setHash("home");
+                }}
+                name="home"
+              >
                 Home
               </a>
-              <a href="#skills" onClick={() => Sethash("skills")} name="skills">
+              <a
+                onClick={() => {
+                  scrollToSection("skills");
+                  setHash("skills");
+                }}
+                name="skills"
+              >
                 Skills
               </a>
               <a
-                href="#projects"
-                onClick={() => Sethash("projects")}
+                onClick={() => {
+                  scrollToSection("projects");
+                  setHash("projects");
+                }}
                 name="projects"
               >
-                {" "}
                 Projects
               </a>
               <a
-                href="#contact"
-                onClick={() => Sethash("contact")}
+                onClick={() => {
+                  scrollToSection("contact");
+                  setHash("contact");
+                }}
                 name="contact"
               >
                 Contact me
@@ -113,11 +138,11 @@ const Header = () => {
           </div>
           <div className="mr-5">
             <a href="AyushResume.pdf" download="AyushResume.pdf">
-              <button class="download-btn pixel-corners">
-                <div class="button-content">
-                  <div class="svg-container">
+              <button className="download-btn pixel-corners">
+                <div className="button-content">
+                  <div className="svg-container">
                     <svg
-                      class="download-icon"
+                      className="download-icon"
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
                       height="24"
@@ -126,8 +151,8 @@ const Header = () => {
                       <path d="M19.479 10.092c-.212-3.951-3.473-7.092-7.479-7.092-4.005 0-7.267 3.141-7.479 7.092-2.57.463-4.521 2.706-4.521 5.408 0 3.037 2.463 5.5 5.5 5.5h13c3.037 0 5.5-2.463 5.5-5.5 0-2.702-1.951-4.945-4.521-5.408zm-7.479 6.908l-4-4h3v-4h2v4h3l-4 4z"></path>
                     </svg>
                   </div>
-                  <div class="text-container ">
-                    <div class="text-white font-bold">View Resume</div>
+                  <div className="text-container">
+                    <div className="text-white font-bold">View Resume</div>
                   </div>
                 </div>
               </button>
@@ -148,8 +173,7 @@ const Header = () => {
             >
               <MenuIcon />
             </IconButton>
-            <div className=" text-3xl font-bold text-white">
-              {/* <img  src=''></img> */}
+            <div className="text-3xl font-bold text-white">
               Ayush <span className="bluegradient">Sharma</span>
             </div>
           </Toolbar>
@@ -179,76 +203,58 @@ const Header = () => {
           <Divider />
           <List className="flex flex-col gap-y-3">
             <ListItem disablePadding>
-              <a href="#home" className="w-full">
-                {" "}
-                <ListItemButton>
-                  <ListItemIcon>
-                    <FaHome />
-                  </ListItemIcon>
-                  <ListItemText primary={"Home"}></ListItemText>
-                </ListItemButton>
-              </a>
-            </ListItem>
-
-            <ListItem disablePadding>
-              <a href="#skills" className="w-full">
-                {" "}
-                <ListItemButton>
-                  <ListItemIcon>
-                    <IoBarChart />
-                  </ListItemIcon>
-                  <ListItemText primary={"Skills"}></ListItemText>
-                </ListItemButton>
-              </a>
-            </ListItem>
-
-            <ListItem disablePadding>
-              <a href="#projects" className="w-full">
-                <ListItemButton>
-                  <ListItemIcon>
-                    <FaLaptopCode />
-                  </ListItemIcon>
-                  <ListItemText primary={"Projects"}></ListItemText>
-                </ListItemButton>
-              </a>
-            </ListItem>
-
-            <ListItem disablePadding>
-              <a href="#contact" className="w-full">
-                {" "}
-                <ListItemButton>
-                  <ListItemIcon>
-                    <FaPhoneAlt />
-                  </ListItemIcon>
-                  <ListItemText primary={"Contact me"}></ListItemText>
-                </ListItemButton>
-              </a>
-            </ListItem>
-
-            <ListItem disablePadding>
-              {" "}
-              <ListItemButton>
-                <a href="AyushResume.pdf" download="AyushResume.pdf">
-                  <button className="download-btn pixel-corners ml-8">
-                    <div className="button-content ">
-                      <div className="svg-container">
-                        <svg
-                          className="download-icon"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                        >
-                          <path d="M19.479 10.092c-.212-3.951-3.473-7.092-7.479-7.092-4.005 0-7.267 3.141-7.479 7.092-2.57.463-4.521 2.706-4.521 5.408 0 3.037 2.463 5.5 5.5 5.5h13c3.037 0 5.5-2.463 5.5-5.5 0-2.702-1.951-4.945-4.521-5.408zm-7.479 6.908l-4-4h3v-4h2v4h3l-4 4z"></path>
-                        </svg>
-                      </div>
-                      <div className="text-container ">
-                        <div className="text-white font-bold">View Resume</div>
-                      </div>
-                    </div>
-                  </button>
-                </a>
+              <ListItemButton onClick={() => scrollToSection("home")}>
+                <ListItemIcon>
+                  <FaHome />
+                </ListItemIcon>
+                <ListItemText primary={"Home"}></ListItemText>
               </ListItemButton>
+            </ListItem>
+            <ListItem disablePadding>
+              <ListItemButton onClick={() => scrollToSection("skills")}>
+                <ListItemIcon>
+                  <IoBarChart />
+                </ListItemIcon>
+                <ListItemText primary={"Skills"}></ListItemText>
+              </ListItemButton>
+            </ListItem>
+            <ListItem disablePadding>
+              <ListItemButton onClick={() => scrollToSection("projects")}>
+                <ListItemIcon>
+                  <FaLaptopCode />
+                </ListItemIcon>
+                <ListItemText primary={"Projects"}></ListItemText>
+              </ListItemButton>
+            </ListItem>
+            <ListItem disablePadding>
+              <ListItemButton onClick={() => scrollToSection("contact")}>
+                <ListItemIcon>
+                  <FaPhoneAlt />
+                </ListItemIcon>
+                <ListItemText primary={"Contact me"}></ListItemText>
+              </ListItemButton>
+            </ListItem>
+            <ListItem disablePadding>
+              <a href="AyushResume.pdf" download="AyushResume.pdf">
+                <button className="download-btn pixel-corners ml-8">
+                  <div className="button-content">
+                    <div className="svg-container">
+                      <svg
+                        className="download-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M19.479 10.092c-.212-3.951-3.473-7.092-7.479-7.092-4.005 0-7.267 3.141-7.479 7.092-2.57.463-4.521 2.706-4.521 5.408 0 3.037 2.463 5.5 5.5 5.5h13c3.037 0 5.5-2.463 5.5-5.5 0-2.702-1.951-4.945-4.521-5.408zm-7.479 6.908l-4-4h3v-4h2v4h3l-4 4z"></path>
+                      </svg>
+                    </div>
+                    <div className="text-container">
+                      <div className="text-white font-bold">View Resume</div>
+                    </div>
+                  </div>
+                </button>
+              </a>
             </ListItem>
           </List>
         </Drawer>
