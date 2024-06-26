@@ -3,6 +3,8 @@ import "./App.css";
 import Header from "./components/header";
 import Home from "./components/home";
 import WhatIDo from "./components/WhatIDo";
+import Skills from "./components/Skills";
+
 function App() {
   return (
     <>
@@ -10,6 +12,7 @@ function App() {
         <Header />
         <Home />
         <WhatIDo />
+        <Skills />
       </div>
     </>
   );

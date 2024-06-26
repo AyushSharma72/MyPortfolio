@@ -91,7 +91,7 @@ const Header = () => {
 
   return (
     <div>
-      <div className="navbar w-[100%] py-3 fixed top-0 left-0 right-0 z-10 hidden md:block">
+      <div className="navbar w-[100%] py-3 fixed top-0 left-0 right-0 z-10 hidden md:block backdrop-blur-md">
         <div className="lg:w-[81%] lg:flex md:w-full md:flex justify-between items-center mx-auto">
           <div className="w-3/4 flex justify-around">
             <div className="text-3xl font-bold text-white">

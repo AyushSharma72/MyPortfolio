@@ -2,11 +2,22 @@ import React from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { Avatar } from "./avatar";
+import { FaCircleChevronDown } from "react-icons/fa6";
 
 const Home = () => {
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const yOffset = -100; // Offset value in pixels
+      const yPosition =
+        element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: yPosition, behavior: "smooth" });
+      setHash(id);
+    }
+  };
   return (
     <div
-      className=" h-[600px] w-[100%] px-3 sm:w-[76%] flex m-auto md:mt-[7rem] mt-[5rem] gap-x-2 sm:gap-0"
+      className=" h-[650px] w-[100%] px-3 sm:w-[76%] flex m-auto md:mt-[7rem] mt-[5rem] gap-x-2 sm:gap-0"
       id="home"
     >
       {/* herosectiontext */}
@@ -38,6 +49,12 @@ const Home = () => {
           <ambientLight intensity={2}></ambientLight>
         </Canvas>
       </div>
+      <FaCircleChevronDown
+        className="text-white animatescrollbutton scrbtn text-3xl"
+        onClick={() => {
+          scrollToSection("Whatido");
+        }}
+      />
     </div>
   );
 };

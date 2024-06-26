@@ -4,17 +4,20 @@ import FrontendAnimation from "../animations/frontendanimation";
 import UiuxAnimation from "../animations/uiux.animation";
 const WhatIDo = () => {
   return (
-    <div className="flex flex-col justify-center items-center gap-y-8">
+    <div
+      className="flex flex-col justify-center items-center gap-y-8 py-4"
+      id="Whatido"
+    >
       <p className="text-3xl text-white font-bold ">
         What I <span className="bluegradient"> Do?</span>
       </p>
 
       {/* animation div */}
 
-      <div className="flex justify-around flex-col items-center md:flex-row flex-wrap gap-y-5 gap-x-5 w-full ">
+      <div className="flex justify-around flex-col  md:flex-row flex-wrap gap-y-5 gap-x-5 w-full pb-5">
         {/* backend */}
 
-        <div className=" flex flex-col p-2 rounded-lg w-[280px] sm:w-[300px] gap-y-2 cardborder">
+        <div className=" flex flex-col p-2 w-[280px] sm:w-[300px] gap-y-2 cardborder   duration-300">
           <BackendAnimation />
           <p className="font-bold text-xl text-center bluegradient">
             Back-end Development
@@ -29,7 +32,7 @@ const WhatIDo = () => {
 
         {/* frontend */}
 
-        <div className=" flex flex-col p-2 rounded-lg w-[280px] sm:w-[300px]  gap-y-2  cardborder">
+        <div className=" flex flex-col p-2 w-[280px] sm:w-[300px]  gap-y-2  cardborder duration-300">
           <FrontendAnimation />
           <p className="font-bold text-xl text-center bluegradient">
             Front-end Development
@@ -44,7 +47,7 @@ const WhatIDo = () => {
 
         {/* UIUX */}
 
-        <div className=" flex flex-col p-2 rounded-lg w-[280px] sm:w-[300px] gap-y-2  cardborder">
+        <div className=" flex flex-col p-2 w-[280px] sm:w-[300px] gap-y-2  cardborder duration-300">
           <UiuxAnimation />
           <p className="font-bold text-xl text-center bluegradient">
             Ux Design
