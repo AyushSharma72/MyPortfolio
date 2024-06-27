@@ -42,7 +42,7 @@ body {
 /* small navbar */
 .css-ciy9n4-MuiPaper-root-MuiAppBar-root,
 .css-jzk4qw-MuiPaper-root-MuiAppBar-root {
-  background-color: rgba(0, 0, 0, 0.382) !important;
+  background-color: rgba(0, 0, 0, 0.978) !important;
 }
 
 .graycolor {
@@ -242,9 +242,9 @@ body {
   animation: floating 2s ease-in-out infinite;
   animation-delay: 3s;
 }
-/* .floatinganimation {
-  animation: floating 2s ease-in-out infinite;
-} */
+.floatinganimation {
+  animation: floatingavatar 3s infinite;
+}
 .scrbtn {
   position: absolute;
   top: 80%;
@@ -256,8 +256,207 @@ body {
   0%,
   100% {
     transform: translateY(0);
+    animation-timing-function: ease-in-out;
   }
   50% {
     transform: translateY(1rem);
+    animation-timing-function: ease-in-out;
+  }
+}
+
+/* avatar animation  */
+
+@keyframes floatingavatar {
+  0% {
+    transform: translateY(0);
+    animation-timing-function: ease-in;
+  }
+  25% {
+    transform: translateY(0.5rem);
+    animation-timing-function: ease-out;
+  }
+  50% {
+    transform: translateY(1rem);
+    animation-timing-function: ease-in;
+  }
+  75% {
+    transform: translateY(0.5rem);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+}
+
+.floatinganimation {
+  animation: floating 3s infinite;
+}
+
+/* circle animation */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translate(250px) rotate(0deg); /* Increased radius to 300px */
+  }
+  100% {
+    transform: rotate(360deg) translate(250px) rotate(-360deg); /* Increased radius to 300px */
+  }
+}
+
+.image1,
+.image2,
+.image3,
+.image4,
+.image5,
+.image6,
+.image7,
+.image8,
+.image9 {
+  position: absolute;
+  top: 45%;
+  left: 48%;
+  transform-origin: -250px 0;
+  animation: rotate 18s linear infinite;
+
+  transform: translate(-50%, -50%);
+}
+
+.image1 {
+  animation-delay: 0s;
+}
+.image2 {
+  animation-delay: -2s;
+}
+.image3 {
+  animation-delay: -4s;
+}
+.image4 {
+  animation-delay: -6s;
+}
+.image5 {
+  animation-delay: -8s;
+}
+.image6 {
+  animation-delay: -10s;
+}
+.image7 {
+  animation-delay: -12s;
+}
+.image8 {
+  animation-delay: -14s;
+}
+.image9 {
+  animation-delay: -16s;
+}
+
+@media (max-width: 600px) {
+  .image1,
+  .image2,
+  .image3,
+  .image4,
+  .image5,
+  .image6,
+  .image7,
+  .image8,
+  .image9 {
+    position: absolute;
+    top: 45%;
+    left: 46%;
+    transform-origin: -250px 0;
+    animation: rotate2 18s linear infinite;
+
+    transform: translate(-50%, -50%);
+  }
+  @keyframes rotate2 {
+    0% {
+      transform: rotate(0deg) translate(180px) rotate(0deg); /* Increased radius to 300px */
+    }
+    100% {
+      transform: rotate(360deg) translate(180px) rotate(-360deg); /* Increased radius to 300px */
+    }
+  }
+
+  .image1 {
+    animation-delay: 0s;
+  }
+  .image2 {
+    animation-delay: -2s;
+  }
+  .image3 {
+    animation-delay: -4s;
+  }
+  .image4 {
+    animation-delay: -6s;
+  }
+  .image5 {
+    animation-delay: -8s;
+  }
+  .image6 {
+    animation-delay: -10s;
+  }
+  .image7 {
+    animation-delay: -12s;
+  }
+  .image8 {
+    animation-delay: -14s;
+  }
+  .image9 {
+    animation-delay: -16s;
+  }
+}
+
+@media (max-width: 400px) {
+  .image1,
+  .image2,
+  .image3,
+  .image4,
+  .image5,
+  .image6,
+  .image7,
+  .image8,
+  .image9 {
+    position: absolute;
+    top: 37%;
+    left: 46%;
+    transform-origin: -250px 0;
+    animation: rotate2 18s linear infinite;
+
+    transform: translate(-50%, -50%);
+  }
+  @keyframes rotate2 {
+    0% {
+      transform: rotate(0deg) translate(150px) rotate(0deg); /* Increased radius to 300px */
+    }
+    100% {
+      transform: rotate(360deg) translate(150px) rotate(-360deg); /* Increased radius to 300px */
+    }
+  }
+
+  .image1 {
+    animation-delay: 0s;
+  }
+  .image2 {
+    animation-delay: -2s;
+  }
+  .image3 {
+    animation-delay: -4s;
+  }
+  .image4 {
+    animation-delay: -6s;
+  }
+  .image5 {
+    animation-delay: -8s;
+  }
+  .image6 {
+    animation-delay: -10s;
+  }
+  .image7 {
+    animation-delay: -12s;
+  }
+  .image8 {
+    animation-delay: -14s;
+  }
+  .image9 {
+    animation-delay: -16s;
   }
 }

@@ -1,23 +1,28 @@
 import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { useAnimations, useFBX, useGLTF } from "@react-three/drei";
-
+import { useFrame } from "@react-three/fiber";
 export function SittingAvatar(props) {
   const { nodes, materials } = useGLTF("modal/Ayush2.glb");
   const group = useRef();
 
-  const { animations: Male } = useFBX("animations/Male.fbx");
+  const { animations: MaleSit } = useFBX("animations/MaleSit.fbx");
 
-  Male[0].name = "Male";
+  MaleSit[0].name = "MaleSit";
 
-  const { actions } = useAnimations(Male, group);
+  const { actions } = useAnimations(MaleSit, group);
 
   useEffect(() => {
-    const MaleAction = actions["Male"];
-    MaleAction.setLoop(THREE.LoopOnce);
-    MaleAction.clampWhenFinished = true;
-    MaleAction.reset().fadeIn(0.3).play();
+    const MaleSitAction = actions["MaleSit"];
+    MaleSitAction.setLoop(THREE.LoopOnce);
+    MaleSitAction.clampWhenFinished = true;
+    MaleSitAction.reset().fadeIn(0.3).play();
   }, [actions]);
+
+  useFrame((state) => {
+    group.current.getObjectByName("Head").lookAt(state.camera.position);
+    group.current.getObjectByName("Neck").lookAt(state.camera.position);
+  });
 
   return (
     <group {...props} dispose={null} ref={group}>

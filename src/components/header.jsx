@@ -203,15 +203,26 @@ const Header = () => {
           <Divider />
           <List className="flex flex-col gap-y-3">
             <ListItem disablePadding>
-              <ListItemButton onClick={() => scrollToSection("home")}>
+              <ListItemButton
+                onClick={() => {
+                  scrollToSection("home");
+                  handleDrawerClose();
+                }}
+              >
                 <ListItemIcon>
                   <FaHome />
                 </ListItemIcon>
                 <ListItemText primary={"Home"}></ListItemText>
               </ListItemButton>
             </ListItem>
+
             <ListItem disablePadding>
-              <ListItemButton onClick={() => scrollToSection("skills")}>
+              <ListItemButton
+                onClick={() => {
+                  handleDrawerClose();
+                  scrollToSection("skills");
+                }}
+              >
                 <ListItemIcon>
                   <IoBarChart />
                 </ListItemIcon>
@@ -219,7 +230,12 @@ const Header = () => {
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
-              <ListItemButton onClick={() => scrollToSection("projects")}>
+              <ListItemButton
+                onClick={() => {
+                  scrollToSection("projects");
+                  handleDrawerClose();
+                }}
+              >
                 <ListItemIcon>
                   <FaLaptopCode />
                 </ListItemIcon>
@@ -227,7 +243,12 @@ const Header = () => {
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
-              <ListItemButton onClick={() => scrollToSection("contact")}>
+              <ListItemButton
+                onClick={() => {
+                  scrollToSection("contact");
+                  handleDrawerClose();
+                }}
+              >
                 <ListItemIcon>
                   <FaPhoneAlt />
                 </ListItemIcon>

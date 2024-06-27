@@ -14,7 +14,7 @@ const WhatIDo = () => {
 
       {/* animation div */}
 
-      <div className="flex justify-around flex-col  md:flex-row flex-wrap gap-y-5 gap-x-5 w-full pb-5">
+      <div className="flex items-center md:justify-around flex-col  md:flex-row flex-wrap gap-y-5 gap-x-5 w-full pb-5">
         {/* backend */}
 
         <div className=" flex flex-col p-2 w-[280px] sm:w-[300px] gap-y-2 cardborder   duration-300">
