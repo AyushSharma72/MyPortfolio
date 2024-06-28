@@ -1,6 +1,6 @@
 import Lottie from "react-lottie";
 
-import animationData from "../assets/uiux.json";
+import animationData from "../assets/animations/uiux.json";
 
 const UiuxAnimation = () => {
   const defaultOptions = {

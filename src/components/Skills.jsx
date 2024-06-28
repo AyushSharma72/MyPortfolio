@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from "react";
 import { SittingAvatar } from "./sittingavatar";
 import { Canvas } from "@react-three/fiber";
-import reactimg from "../assets/reactimg.svg";
-import nodeimg from "../assets/nodejs.svg";
-import mongo from "../assets/mongodb.svg";
-import expressimg from "../assets/express.png";
-import javascript from "../assets/javascript.svg";
-import css from "../assets/css3.svg";
-import postman from "../assets/getpostman-icon.svg";
-import git from "../assets/giticon.svg";
-import java from "../assets/java.svg";
+import reactimg from "../assets/skillslogo/reactimg.svg";
+import nodeimg from "../assets/skillslogo/nodejs.svg";
+import mongo from "../assets/skillslogo/mongodb.svg";
+import expressimg from "../assets/skillslogo/express.png";
+import javascript from "../assets/skillslogo/javascript.svg";
+import css from "../assets/skillslogo/css3.svg";
+import postman from "../assets/skillslogo/getpostman-icon.svg";
+import git from "../assets/skillslogo/giticon.svg";
+import java from "../assets/skillslogo/java.svg";
+import tailwind from "../assets/skillslogo/tailwind.svg";
 import { useMediaQuery } from "react-responsive";
 
 const Skills = () => {
@@ -24,11 +24,19 @@ const Skills = () => {
   } else if (isMediumScreen) {
     positionY = -0.5; // Position for screens between 401px and 600px
   } else {
-    positionY = -0.5  ; // Default position for screens > 600px
+    positionY = -0.5; // Default position for screens > 600px
   }
   return (
-    <div className="flex flex-col items-center mt-3 h-screen " id="skills">
-      <p className="text-3xl text-white font-bold ">Skills</p>
+    <div className="flex flex-col items-center mt-5 h-screen " id="skills">
+      <p className="text-3xl text-white font-bold ">
+        My{" "}
+        <span
+          className="bluegradient
+      "
+        >
+          Skills
+        </span>
+      </p>
 
       <div className="relative w-full flex items-center sm:h-full h-[500px] overflow-hidden">
         <Canvas shadows className="floatinganimation">
@@ -48,6 +56,7 @@ const Skills = () => {
         <img src={postman} className="w-[3rem] image7"></img>
         <img src={git} className="w-[3rem] image8"></img>
         <img src={java} className="w-[3rem] image9"></img>
+        <img src={tailwind} className="w-[3rem] image10"></img>
       </div>
     </div>
   );

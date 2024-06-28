@@ -23,7 +23,7 @@ const Home = () => {
       {/* herosectiontext */}
       <div className="flex flex-col gap-y-6 sm:mt-20 mt-[3rem] w-[65%] ">
         <p className="text-xl  text-white font-medium tracking-wide">
-          Hi, I'm Ayush Sharma
+          Hi, I'm Ayush 
         </p>
         <p className="text-5xl text-white font-bold tracking-normal">
           <span className="bluegradient"> Full-Stack </span>

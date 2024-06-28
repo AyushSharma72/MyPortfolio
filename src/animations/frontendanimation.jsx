@@ -1,6 +1,6 @@
 import Lottie from "react-lottie";
 
-import animationData from "../assets/frontend.json";
+import animationData from "../assets/animations/frontend.json";
 
 const FrontendAnimation = () => {
   const defaultOptions = {

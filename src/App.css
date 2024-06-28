@@ -10,8 +10,6 @@ html {
   --purple-color: #8721da;
 }
 .bluegradient {
-  /* background: linear-gradient(220.55deg, #a531dc 0%, #5f05f1 100%); */
-
   background: linear-gradient(220.55deg, #ff5eef 0%, #456eff 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -22,15 +20,12 @@ body {
     rgba(9, 29, 85, 1) 0.2%,
     rgba(0, 0, 0, 0.992) 100.2%
   );
-  /* background-color: rgba(0, 0, 0, 0.909); */
 }
 .active {
   border-bottom: 3px solid white;
   color: white !important;
 }
-.navbar {
-  background-color: rgba(0, 0, 0, 0.382);
-}
+
 .navbar a {
   color: rgba(255, 255, 255, 0.719);
   transition: color 0.2s;
@@ -42,7 +37,8 @@ body {
 /* small navbar */
 .css-ciy9n4-MuiPaper-root-MuiAppBar-root,
 .css-jzk4qw-MuiPaper-root-MuiAppBar-root {
-  background-color: rgba(0, 0, 0, 0.978) !important;
+  background-color: transparent !important;
+  backdrop-filter: blur(10px);
 }
 
 .graycolor {
@@ -311,12 +307,13 @@ body {
 .image6,
 .image7,
 .image8,
-.image9 {
+.image9,
+.image10 {
   position: absolute;
   top: 45%;
   left: 48%;
   transform-origin: -250px 0;
-  animation: rotate 18s linear infinite;
+  animation: rotate 20s linear infinite;
 
   transform: translate(-50%, -50%);
 }
@@ -348,6 +345,9 @@ body {
 .image9 {
   animation-delay: -16s;
 }
+.image10 {
+  animation-delay: -18s;
+}
 
 @media (max-width: 600px) {
   .image1,
@@ -358,12 +358,13 @@ body {
   .image6,
   .image7,
   .image8,
-  .image9 {
+  .image9,
+  .image10 {
     position: absolute;
     top: 45%;
     left: 46%;
     transform-origin: -250px 0;
-    animation: rotate2 18s linear infinite;
+    animation: rotate2 20s linear infinite;
 
     transform: translate(-50%, -50%);
   }
@@ -403,6 +404,9 @@ body {
   .image9 {
     animation-delay: -16s;
   }
+  .image10 {
+    animation-delay: -18s;
+  }
 }
 
 @media (max-width: 400px) {
@@ -414,7 +418,8 @@ body {
   .image6,
   .image7,
   .image8,
-  .image9 {
+  .image9,
+  .image10 {
     position: absolute;
     top: 37%;
     left: 46%;
@@ -459,4 +464,16 @@ body {
   .image9 {
     animation-delay: -16s;
   }
+  .image10 {
+    animation-delay: -18s;
+  }
+}
+.card {
+  border: 1px solid #8721da;
+}
+.card:hover{
+  transform: scale(1.01);
+}
+.projectbtns {
+  background-color: var(--purple-color);
 }

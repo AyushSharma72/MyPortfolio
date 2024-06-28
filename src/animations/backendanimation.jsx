@@ -1,6 +1,6 @@
 import Lottie from "react-lottie";
 
-import animationData from "../assets/backend.json";
+import animationData from "../assets/animations/backend.json";
 
 const BackendAnimation = () => {
   const defaultOptions = {
@@ -11,7 +11,6 @@ const BackendAnimation = () => {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
-
   return <Lottie options={defaultOptions} height={150} width={200} />;
 };
 
