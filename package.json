@@ -26,6 +26,7 @@
     "react-lottie": "^1.2.4",
     "react-responsive": "^10.0.0",
     "react-router-dom": "^6.23.1",
+    "react-vertical-timeline-component": "^3.6.0",
     "swiper": "^11.1.4"
   },
   "devDependencies": {

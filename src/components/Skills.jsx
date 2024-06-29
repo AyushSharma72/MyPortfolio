@@ -27,8 +27,8 @@ const Skills = () => {
     positionY = -0.5; // Default position for screens > 600px
   }
   return (
-    <div className="flex flex-col items-center mt-5 h-screen " id="skills">
-      <p className="text-3xl text-white font-bold ">
+    <div className="flex flex-col items-center  h-screen " id="skills">
+      <p className="text-3xl text-white font-bold mt-5">
         My{" "}
         <span
           className="bluegradient

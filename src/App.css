@@ -17,8 +17,20 @@ html {
 body {
   background-image: radial-gradient(
     circle 815px at 23.4% -21.8%,
-    rgba(9, 29, 85, 1) 0.2%,
+    rgba(9, 29, 85, 1) 58.2%,
     rgba(0, 0, 0, 0.992) 100.2%
+  );
+}
+
+#home,
+#Whatido,
+#skills,
+#projects,
+#Experience {
+  background-image: radial-gradient(
+    circle 815px at 23.4% -21.8%,
+    rgba(9, 29, 85, 1) 0.2%,
+    rgba(0, 0, 0, 0) 100.2%
   );
 }
 .active {
@@ -223,6 +235,36 @@ body {
   border-image-slice: 1;
   /* border-radius: 10px; */
 }
+
+.border-gradient-left::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 1px; /* Adjust the border width as needed */
+  background: linear-gradient(220.55deg, #ff5eef 0%, #456eff 100%);
+}
+.border-gradient-left::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  width: 1px; /* Adjust the border width as needed */
+  background: linear-gradient(220.55deg, #ff5eef 0%, #456eff 100%);
+}
+.border-gradient-left::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 1px; /* Adjust the border width as needed */
+  background: linear-gradient(220.55deg, #ff5eef 0%, #456eff 100%);
+}
+
 /* CSS */
 .cardborder:hover {
   transform: scale(1.03);
@@ -477,7 +519,7 @@ body {
 }
 
 /* .swiper-pagination {
-  bottom: -0.5% !important;
+  bottom: -1.5% !important;
   width: 8% !important;
   z-index: 2;
   left: 47% !important;

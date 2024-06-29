@@ -18,20 +18,20 @@ import { Tag } from "antd";
 
 const Projects = () => {
   return (
-    <div className="flex flex-col items-center pb-10" id="projects">
-      <p className="text-3xl text-white font-bold">
+    <div className="flex flex-col items-center" id="projects">
+      <p className="text-3xl text-white font-bold mt-5">
         My <span className="bluegradient">Projects</span>
       </p>
 
       {/* carousel */}
-      <div className=" w-full text-center mt-3 relative">
+      <div className=" w-full text-center mt-3 relative  py-14">
         <Swiper
           effect={"coverflow"}
           centeredSlides={true}
           slidesPerView={3}
           navigation={true}
           grabCursor={true}
-          pagination={{ clickable: true }}
+          // pagination={{ clickable: true }}
           coverflowEffect={{
             rotate: 50,
             stretch: 0,
@@ -56,7 +56,7 @@ const Projects = () => {
             },
           }}
         >
-          <SwiperSlide >
+          <SwiperSlide>
             <div className="flex flex-col w-[300px] gap-y-2 card duration-300 rounded-lg p-5 h-[475px]">
               <StudentCommunitySlider />
               <p className="font-bold text-xl text-center bluegradient">
@@ -102,7 +102,7 @@ const Projects = () => {
             </div>
           </SwiperSlide>
 
-          <SwiperSlide >
+          <SwiperSlide>
             <div className="flex flex-col w-[300px] gap-y-1 card  rounded-lg p-5 h-[475px]">
               <EcomSlider />
               <p className="font-bold text-xl text-center bluegradient">
@@ -148,7 +148,7 @@ const Projects = () => {
             </div>
           </SwiperSlide>
 
-          <SwiperSlide >
+          <SwiperSlide>
             <div className="flex flex-col w-[300px] gap-y-1 card duration-300 rounded-lg p-5 h-[475px]">
               <CodeSlider />
               <p className="font-bold text-xl text-center bluegradient">
@@ -195,7 +195,7 @@ const Projects = () => {
             {/* <a href="" target="blank"></a> */}
           </SwiperSlide>
 
-          <SwiperSlide >
+          <SwiperSlide>
             <div className="flex flex-col w-[300px] gap-y-2 card rounded-lg p-5 h-[475px]">
               <img src={lucky} className="rounded-md h-[160px]" />
               <p className="font-bold text-xl text-center bluegradient">
@@ -224,7 +224,7 @@ const Projects = () => {
               </div>
               <div className="flex w-full justify-start gap-5 mt-2">
                 <a
-                  href="https://github.com/AyushSharma72/CodeEditor"
+                  href="https://github.com/AyushSharma72/Luckydraw"
                   target="blank"
                 >
                   {" "}
@@ -232,17 +232,11 @@ const Projects = () => {
                     <FaGithub /> Github
                   </button>
                 </a>
-                <a href="https://reactcodecompiler.onrender.com">
-                  {" "}
-                  <button className="projectbtns p-2 rounded-md text-white font-semibold flex items-center gap-2">
-                    <IoLink /> Explore
-                  </button>
-                </a>
               </div>
             </div>
           </SwiperSlide>
 
-          <SwiperSlide >
+          <SwiperSlide>
             <div className="flex flex-col w-[300px] gap-y-2 card rounded-lg p-5 h-[475px]">
               <img src={weather} className="rounded-md h-[160px]" />
               <p className="font-bold text-xl text-center bluegradient">
@@ -285,7 +279,7 @@ const Projects = () => {
             </div>
           </SwiperSlide>
 
-          <SwiperSlide >
+          <SwiperSlide>
             <div className="flex flex-col w-[300px] gap-y-1 card rounded-lg p-5 h-[475px]">
               <ResumeSlider />
               <p className="font-bold text-xl text-center bluegradient">
@@ -327,7 +321,7 @@ const Projects = () => {
             </div>
           </SwiperSlide>
 
-          <SwiperSlide >
+          <SwiperSlide>
             <div className="flex flex-col w-[300px] gap-y-2 card rounded-lg p-5 h-[475px]">
               <QuizSlider />
               <p className="font-bold text-xl text-center bluegradient">

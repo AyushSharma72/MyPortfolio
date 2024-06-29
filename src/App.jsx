@@ -5,6 +5,7 @@ import Home from "./components/home";
 import WhatIDo from "./components/WhatIDo";
 import Skills from "./components/Skills";
 import Projects from "./components/projects";
+import Experience from "./components/Experience";
 function App() {
   return (
     <>
@@ -14,6 +15,7 @@ function App() {
         <WhatIDo />
         <Skills />
         <Projects />
+        <Experience />
       </div>
     </>
   );
