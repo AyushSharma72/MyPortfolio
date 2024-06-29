@@ -1,33 +1,37 @@
 import React from "react";
-import { EffectCoverflow, Pagination } from "swiper/modules";
+import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
-import { FaGithub } from "react-icons/fa";
-import { IoLink } from "react-icons/io5";
-import talkofcode1 from "../assets/projectimages/talkofcode2.png";
-import Ecom from "../assets/projectimages/Ecom.png";
-import resume from "../assets/projectimages/Resume.png";
-import code from "../assets/projectimages/codecompiler.png";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { FaGithub } from "react-icons/fa";
+import { IoLink } from "react-icons/io5";
+import StudentCommunitySlider from "./ProjextSliders/StudentCommunity";
+import EcomSlider from "./ProjextSliders/EcomSlider";
+import CodeSlider from "./ProjextSliders/CodeSlider";
+import ResumeSlider from "./ProjextSliders/ResumeBuilder";
+import QuizSlider from "./ProjextSliders/QuizSlider";
+import lucky from "../assets/projectimages/luckdraw.png";
+import weather from "../assets/projectimages/weather.png";
+import { Tag } from "antd";
 
 const Projects = () => {
   return (
-    <div className="flex flex-col items-center pb-10 ">
-      <p className="text-3xl text-white font-bold ">
+    <div className="flex flex-col items-center pb-10" id="projects">
+      <p className="text-3xl text-white font-bold">
         My <span className="bluegradient">Projects</span>
       </p>
 
-      {/* crousal */}
-
-      <div className="w-3/4 text-center mt-3">
+      {/* carousel */}
+      <div className=" w-full text-center mt-3 relative">
         <Swiper
           effect={"coverflow"}
           centeredSlides={true}
           slidesPerView={3}
           navigation={true}
           grabCursor={true}
+          pagination={{ clickable: true }}
           coverflowEffect={{
             rotate: 50,
             stretch: 0,
@@ -38,114 +42,332 @@ const Projects = () => {
           initialSlide={1}
           breakpoints={{
             0: {
-              slidesPerView: 1,
+              slidesPerView: 1, // 1 slide for screens 0px and larger
             },
-            500: {
-              slidesPerView: 3,
+            480: {
+              slidesPerView: 1, // 1 slide for screens 480px and larger
             },
-            // Add more breakpoints if needed
+            768: {
+              slidesPerView: 2, // 2 slides for screens 768px and larger
+            },
+
+            1440: {
+              slidesPerView: 3, // 4 slides for screens 1440px and larger
+            },
           }}
         >
-          <SwiperSlide className="p-4">
-            <div className=" flex flex-col  w-[280px] sm:w-[290px] gap-y-2 card duration-300 rounded-lg p-5 h-[465px]">
-              <img src={talkofcode1} className="rounded-md" />
+          <SwiperSlide >
+            <div className="flex flex-col w-[300px] gap-y-2 card duration-300 rounded-lg p-5 h-[475px]">
+              <StudentCommunitySlider />
               <p className="font-bold text-xl text-center bluegradient">
                 Student Community
               </p>
-              <hr></hr>
+              <hr />
               <p className="flex text-start font-semibold text-white p-1">
                 TalkOfCode is a vibrant students and tech community platform
                 where users can buy and sell tech products, seek and provide
                 solutions to technical queries, and stay updated with the latest
                 tech news.
               </p>
-              <div className="flex w-full justify-start gap-8 ">
-                <button className="projectbtns p-2 rounded-md text-white font-semibold flex items-center gap-2">
-                  <FaGithub /> Github
-                </button>
-                <button className="projectbtns  p-2 rounded-md  text-white font-semibold flex items-center gap-2">
+              <div className="flex flex-col gap-y-2">
+                <p className="text-white text-left">Developed with:</p>
+                <div className="flex gap-2">
+                  <Tag color="blue">
+                    <p className="text-black font-medium">React</p>
+                  </Tag>
+                  <Tag color="lime">
+                    <p className="text-black font-medium">Nodejs</p>
+                  </Tag>
+                  <Tag color="green">
+                    <p className="text-black font-medium">Mongodb</p>
+                  </Tag>
+                </div>
+              </div>
+              <div className="flex w-full justify-start gap-5 mt-2">
+                <a
+                  href="https://github.com/AyushSharma72/AyushReact.git"
+                  target="blank"
+                >
+                  <button className="projectbtns p-2 rounded-md text-white font-semibold flex items-center gap-2">
+                    <FaGithub /> Github
+                  </button>
+                </a>{" "}
+                <a href="https://ayush-react.vercel.app/" target="blank">
                   {" "}
-                  <IoLink />
-                  Demo
-                </button>
+                  <button className="projectbtns p-2 rounded-md text-white font-semibold flex items-center gap-2">
+                    <IoLink /> Explore
+                  </button>
+                </a>
               </div>
             </div>
           </SwiperSlide>
 
-          <SwiperSlide className="p-4">
-            <div className=" flex flex-col  w-[280px] sm:w-[290px]  gap-y-2 card duration-300 rounded-lg  p-5  h-[465px]">
-              <img src={Ecom} className="rounded-md" />
+          <SwiperSlide >
+            <div className="flex flex-col w-[300px] gap-y-1 card  rounded-lg p-5 h-[475px]">
+              <EcomSlider />
               <p className="font-bold text-xl text-center bluegradient">
                 Ecommerce Website
               </p>
-              <hr></hr>
+              <hr />
               <p className="flex text-start font-semibold text-white p-1">
                 Developed an E-commerce website. The site features comprehensive
                 admin tools for product and user management, and both user and
                 admin functionalities like product search, cart, and payment
-                gateway integration. General features include user registration,
-                login, and password reset.
+                gateway integration.
               </p>
-              <div className="flex w-full justify-start gap-8">
-                <button className="projectbtns p-2 rounded-md text-white font-semibold flex items-center gap-2">
-                  <FaGithub /> Github
-                </button>
-                <button className="projectbtns  p-2 rounded-md  text-white font-semibold flex items-center gap-2">
+              <div className="flex flex-col gap-y-2">
+                <p className="text-white text-left">Developed with:</p>
+                <div className="flex gap-2">
+                  <Tag color="blue">
+                    <p className="text-black font-medium">React</p>
+                  </Tag>
+                  <Tag color="lime">
+                    <p className="text-black font-medium">Nodejs</p>
+                  </Tag>
+                  <Tag color="green">
+                    <p className="text-black font-medium">Mongodb</p>
+                  </Tag>
+                </div>
+              </div>
+              <div className="flex w-full justify-start gap-5 mt-2">
+                <a
+                  href="https://github.com/AyushSharma72/EcomWebApp"
+                  target="blank"
+                >
+                  <button className="projectbtns p-2 rounded-md text-white font-semibold flex items-center gap-2">
+                    <FaGithub /> Github
+                  </button>
+                </a>
+                <a href="https://ayushecomwebapp.onrender.com" target="blank">
                   {" "}
-                  <IoLink />
-                  Demo
-                </button>
+                  <button className="projectbtns p-2 rounded-md text-white font-semibold flex items-center gap-2">
+                    <IoLink /> Explore
+                  </button>
+                </a>
               </div>
             </div>
           </SwiperSlide>
 
-          <SwiperSlide className="p-4">
-            <div className=" flex flex-col  w-[280px] sm:w-[290px]  gap-y-2 card duration-300 rounded-lg  p-5  h-[465px]">
-              <img src={resume} className="rounded-md" />
-              <p className="font-bold text-xl text-center bluegradient">
-                Resume Builder
-              </p>
-              <hr></hr>
-              <p className="flex text-start font-semibold text-white p-1">
-                A basic website where user can enter his/her details and
-                generate a resume. After generating the resume the user can aslo
-                download an image of the generated resume.
-              </p>
-              <div className="flex w-full justify-start gap-8">
-                <button className="projectbtns p-2 rounded-md text-white font-semibold flex items-center gap-2">
-                  <FaGithub /> Github
-                </button>
-                <button className="projectbtns  p-2 rounded-md  text-white font-semibold flex items-center gap-2">
-                  {" "}
-                  <IoLink />
-                  Demo
-                </button>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide className="p-4">
-            <div className=" flex flex-col  w-[280px] sm:w-[290px]  gap-y-2 card duration-300 rounded-lg  p-5  h-[465px]">
-              <img src={code} className="rounded-md" />
+          <SwiperSlide >
+            <div className="flex flex-col w-[300px] gap-y-1 card duration-300 rounded-lg p-5 h-[475px]">
+              <CodeSlider />
               <p className="font-bold text-xl text-center bluegradient">
                 Online Code Compiler
               </p>
-              <hr></hr>
+              <hr />
               <p className="flex text-start font-semibold text-white p-1">
                 Developed an online code compiler. This project was developed
                 using React.js it supports programming languages such as C++,
                 Java, and Python. Additionally, the compiler features three
                 different themes and adjustable text size functionality.
               </p>
-              <div className="flex w-full justify-start gap-8">
-                <button className="projectbtns p-2 rounded-md text-white font-semibold flex items-center gap-2">
-                  <FaGithub /> Github
-                </button>
-                <button className="projectbtns  p-2 rounded-md  text-white font-semibold flex items-center gap-2">
+              <div className="flex flex-col gap-y-2">
+                <p className="text-white text-left">Developed with:</p>
+                <div className="flex gap-2">
+                  <Tag color="blue">
+                    <p className="text-black font-medium">React</p>
+                  </Tag>
+                  <Tag color="lime">
+                    <p className="text-black font-medium">Css</p>
+                  </Tag>
+                </div>
+              </div>
+              <div className="flex w-full justify-start gap-5 mt-2">
+                <a
+                  href="https://github.com/AyushSharma72/CodeEditor"
+                  target="blank"
+                >
                   {" "}
-                  <IoLink />
-                  Demo
-                </button>
+                  <button className="projectbtns p-2 rounded-md text-white font-semibold flex items-center gap-2">
+                    <FaGithub /> Github
+                  </button>
+                </a>
+                <a
+                  href="https://reactcodecompiler.onrender.com "
+                  target="blank"
+                >
+                  <button className="projectbtns p-2 rounded-md text-white font-semibold flex items-center gap-2">
+                    <IoLink /> Explore
+                  </button>
+                </a>
+              </div>
+            </div>
+            {/* <a href="" target="blank"></a> */}
+          </SwiperSlide>
+
+          <SwiperSlide >
+            <div className="flex flex-col w-[300px] gap-y-2 card rounded-lg p-5 h-[475px]">
+              <img src={lucky} className="rounded-md h-[160px]" />
+              <p className="font-bold text-xl text-center bluegradient">
+                Lucky Draw System
+              </p>
+              <hr />
+              <p className="flex text-start font-semibold text-white p-1">
+                A website developed by me during my internship in nagarnigam to
+                conduct lucky draw in indore. Which generated random winners
+                from the database of nagarnigam replacing the traditional excel
+                system
+              </p>
+              <div className="flex flex-col gap-y-2">
+                <p className="text-white text-left">Developed with:</p>
+                <div className="flex gap-2">
+                  <Tag color="blue">
+                    <p className="text-black font-medium">React</p>
+                  </Tag>
+                  <Tag color="lime">
+                    <p className="text-black font-medium">Nodejs</p>
+                  </Tag>
+                  <Tag color="green">
+                    <p className="text-black font-medium">Mongodb</p>
+                  </Tag>
+                </div>
+              </div>
+              <div className="flex w-full justify-start gap-5 mt-2">
+                <a
+                  href="https://github.com/AyushSharma72/CodeEditor"
+                  target="blank"
+                >
+                  {" "}
+                  <button className="projectbtns p-2 rounded-md text-white font-semibold flex items-center gap-2">
+                    <FaGithub /> Github
+                  </button>
+                </a>
+                <a href="https://reactcodecompiler.onrender.com">
+                  {" "}
+                  <button className="projectbtns p-2 rounded-md text-white font-semibold flex items-center gap-2">
+                    <IoLink /> Explore
+                  </button>
+                </a>
+              </div>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide >
+            <div className="flex flex-col w-[300px] gap-y-2 card rounded-lg p-5 h-[475px]">
+              <img src={weather} className="rounded-md h-[160px]" />
+              <p className="font-bold text-xl text-center bluegradient">
+                Weather App
+              </p>
+              <hr />
+              <p className="flex text-start font-semibold text-white p-1">
+                A weather application build using the openweathermap API in
+                which users can search for weather conditions of various
+                locations, Application was made with React.js, Node.js
+              </p>
+              <div className="flex flex-col gap-y-2">
+                <p className="text-white text-left">Developed with:</p>
+                <div className="flex gap-2">
+                  <Tag color="blue">
+                    <p className="text-black font-medium">React</p>
+                  </Tag>
+                  <Tag color="lime">
+                    <p className="text-black font-medium">Css</p>
+                  </Tag>
+                </div>
+              </div>
+              <div className="flex w-full justify-start gap-5 mt-2">
+                <a
+                  href="https://github.com/AyushSharma72/weatherApp"
+                  target="blank"
+                >
+                  {" "}
+                  <button className="projectbtns p-2 rounded-md text-white font-semibold flex items-center gap-2">
+                    <FaGithub /> Github
+                  </button>
+                </a>
+                <a href="https://ayushweatherapp.onrender.com/">
+                  {" "}
+                  <button className="projectbtns p-2 rounded-md text-white font-semibold flex items-center gap-2">
+                    <IoLink /> Explore
+                  </button>
+                </a>
+              </div>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide >
+            <div className="flex flex-col w-[300px] gap-y-1 card rounded-lg p-5 h-[475px]">
+              <ResumeSlider />
+              <p className="font-bold text-xl text-center bluegradient">
+                Resume Builder
+              </p>
+              <hr />
+              <p className="flex text-start font-semibold text-white p-1">
+                Developed a Resume builder with 4 unique templates and
+                re-orderable sections built using React.js which saves resumes
+                in pdf format.
+              </p>
+              <div className="flex flex-col gap-y-2">
+                <p className="text-white text-left">Developed with:</p>
+                <div className="flex gap-2">
+                  <Tag color="blue">
+                    <p className="text-black font-medium">React</p>
+                  </Tag>
+                  <Tag color="lime">
+                    <p className="text-black font-medium">Css</p>
+                  </Tag>
+                </div>
+              </div>
+              <div className="flex w-full justify-start gap-5 mt-2">
+                <a
+                  href="https://github.com/AyushSharma72/ResumeBuilder"
+                  target="blank"
+                >
+                  {" "}
+                  <button className="projectbtns p-2 rounded-md text-white font-semibold flex items-center gap-2">
+                    <FaGithub /> Github
+                  </button>
+                </a>
+                <a href="https://react-resume-builder.onrender.com/">
+                  <button className="projectbtns p-2 rounded-md text-white font-semibold flex items-center gap-2">
+                    <IoLink /> Explore
+                  </button>
+                </a>
+              </div>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide >
+            <div className="flex flex-col w-[300px] gap-y-2 card rounded-lg p-5 h-[475px]">
+              <QuizSlider />
+              <p className="font-bold text-xl text-center bluegradient">
+                Quiz Web App
+              </p>
+              <hr />
+              <p className="flex text-start font-semibold text-white p-1">
+                A Quiz web application created by me during my internship at
+                salesqueen solutions. This website was made to conduct quizzes
+                to the salesqueen employees. It was made using MERN stack
+              </p>
+              <div className="flex flex-col gap-y-2">
+                <p className="text-white text-left">Developed with:</p>
+                <div className="flex gap-2">
+                  <Tag color="blue">
+                    <p className="text-black font-medium">React</p>
+                  </Tag>
+                  <Tag color="lime">
+                    <p className="text-black font-medium">Nodejs</p>
+                  </Tag>
+                  <Tag color="green">
+                    <p className="text-black font-medium">Mongodb</p>
+                  </Tag>
+                </div>
+              </div>
+              <div className="flex w-full justify-start gap-5 mt-2">
+                <a
+                  href="https://github.com/AyushSharma72/quizapp"
+                  target="blank"
+                >
+                  <button className="projectbtns p-2 rounded-md text-white font-semibold flex items-center gap-2">
+                    <FaGithub /> Github
+                  </button>
+                </a>{" "}
+                <a href="https://quizwebapp.onrender.com/" target="blank">
+                  {" "}
+                  <button className="projectbtns p-2 rounded-md text-white font-semibold flex items-center gap-2">
+                    <IoLink /> Explore
+                  </button>
+                </a>
               </div>
             </div>
           </SwiperSlide>

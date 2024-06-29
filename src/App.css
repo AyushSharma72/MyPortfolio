@@ -471,9 +471,49 @@ body {
 .card {
   border: 1px solid #8721da;
 }
-.card:hover{
-  transform: scale(1.01);
-}
+
 .projectbtns {
   background-color: var(--purple-color);
+}
+
+/* .swiper-pagination {
+  bottom: -0.5% !important;
+  width: 8% !important;
+  z-index: 2;
+  left: 47% !important;
+  background-color: #8721da4a;
+} */
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--purple-color) !important;
+
+  position: absolute;
+  top: 82% !important;
+}
+
+.slick-next {
+  color: rgb(0, 0, 0) !important;
+}
+
+.slick-prev {
+  color: rgb(0, 0, 0) !important;
+}
+.swiper-slide {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+@media (max-width: 500px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .card {
+    width: 250px;
+    padding: 10px;
+    height: 555px;
+  }
 }
