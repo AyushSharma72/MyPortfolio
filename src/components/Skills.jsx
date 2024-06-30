@@ -27,7 +27,10 @@ const Skills = () => {
     positionY = -0.5; // Default position for screens > 600px
   }
   return (
-    <div className="flex flex-col items-center  h-screen " id="skills">
+    <div
+      className="flex flex-col items-center h-[600px] sm:h-screen "
+      id="skills"
+    >
       <p className="text-3xl text-white font-bold mt-5">
         My{" "}
         <span

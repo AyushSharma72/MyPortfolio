@@ -42,17 +42,21 @@ const Projects = () => {
           initialSlide={1}
           breakpoints={{
             0: {
-              slidesPerView: 1, // 1 slide for screens 0px and larger
+              slidesPerView: 1,
+              initialSlide: 0,
             },
             480: {
-              slidesPerView: 1, // 1 slide for screens 480px and larger
+              slidesPerView: 1,
+              initialSlide: 0,
             },
             768: {
-              slidesPerView: 2, // 2 slides for screens 768px and larger
+              slidesPerView: 2,
+              initialSlide: 1,
             },
 
             1440: {
-              slidesPerView: 3, // 4 slides for screens 1440px and larger
+              slidesPerView: 3,
+              initialSlide: 1,
             },
           }}
         >
@@ -63,7 +67,7 @@ const Projects = () => {
                 Student Community
               </p>
               <hr />
-              <p className="flex text-start font-semibold text-white p-1">
+              <p className="flex text-start  text-white p-1">
                 TalkOfCode is a vibrant students and tech community platform
                 where users can buy and sell tech products, seek and provide
                 solutions to technical queries, and stay updated with the latest
@@ -88,13 +92,13 @@ const Projects = () => {
                   href="https://github.com/AyushSharma72/AyushReact.git"
                   target="blank"
                 >
-                  <button className="projectbtns p-2 rounded-md text-white font-semibold flex items-center gap-2">
+                  <button className="projectbtns p-2 rounded-md text-white  flex items-center gap-2">
                     <FaGithub /> Github
                   </button>
                 </a>{" "}
                 <a href="https://ayush-react.vercel.app/" target="blank">
                   {" "}
-                  <button className="projectbtns p-2 rounded-md text-white font-semibold flex items-center gap-2">
+                  <button className="projectbtns p-2 rounded-md text-white  flex items-center gap-2">
                     <IoLink /> Explore
                   </button>
                 </a>
@@ -109,7 +113,7 @@ const Projects = () => {
                 Ecommerce Website
               </p>
               <hr />
-              <p className="flex text-start font-semibold text-white p-1">
+              <p className="flex text-start  text-white p-1">
                 Developed an E-commerce website. The site features comprehensive
                 admin tools for product and user management, and both user and
                 admin functionalities like product search, cart, and payment
@@ -134,13 +138,13 @@ const Projects = () => {
                   href="https://github.com/AyushSharma72/EcomWebApp"
                   target="blank"
                 >
-                  <button className="projectbtns p-2 rounded-md text-white font-semibold flex items-center gap-2">
+                  <button className="projectbtns p-2 rounded-md text-white  flex items-center gap-2">
                     <FaGithub /> Github
                   </button>
                 </a>
                 <a href="https://ayushecomwebapp.onrender.com" target="blank">
                   {" "}
-                  <button className="projectbtns p-2 rounded-md text-white font-semibold flex items-center gap-2">
+                  <button className="projectbtns p-2 rounded-md text-white  flex items-center gap-2">
                     <IoLink /> Explore
                   </button>
                 </a>
@@ -155,7 +159,7 @@ const Projects = () => {
                 Online Code Compiler
               </p>
               <hr />
-              <p className="flex text-start font-semibold text-white p-1">
+              <p className="flex text-start  text-white p-1">
                 Developed an online code compiler. This project was developed
                 using React.js it supports programming languages such as C++,
                 Java, and Python. Additionally, the compiler features three
@@ -178,7 +182,7 @@ const Projects = () => {
                   target="blank"
                 >
                   {" "}
-                  <button className="projectbtns p-2 rounded-md text-white font-semibold flex items-center gap-2">
+                  <button className="projectbtns p-2 rounded-md text-white  flex items-center gap-2">
                     <FaGithub /> Github
                   </button>
                 </a>
@@ -186,7 +190,7 @@ const Projects = () => {
                   href="https://reactcodecompiler.onrender.com "
                   target="blank"
                 >
-                  <button className="projectbtns p-2 rounded-md text-white font-semibold flex items-center gap-2">
+                  <button className="projectbtns p-2 rounded-md text-white  flex items-center gap-2">
                     <IoLink /> Explore
                   </button>
                 </a>
@@ -202,7 +206,7 @@ const Projects = () => {
                 Lucky Draw System
               </p>
               <hr />
-              <p className="flex text-start font-semibold text-white p-1">
+              <p className="flex text-start  text-white p-1">
                 A website developed by me during my internship in nagarnigam to
                 conduct lucky draw in indore. Which generated random winners
                 from the database of nagarnigam replacing the traditional excel
@@ -228,7 +232,7 @@ const Projects = () => {
                   target="blank"
                 >
                   {" "}
-                  <button className="projectbtns p-2 rounded-md text-white font-semibold flex items-center gap-2">
+                  <button className="projectbtns p-2 rounded-md text-white  flex items-center gap-2">
                     <FaGithub /> Github
                   </button>
                 </a>
@@ -243,7 +247,7 @@ const Projects = () => {
                 Weather App
               </p>
               <hr />
-              <p className="flex text-start font-semibold text-white p-1">
+              <p className="flex text-start  text-white p-1">
                 A weather application build using the openweathermap API in
                 which users can search for weather conditions of various
                 locations, Application was made with React.js, Node.js
@@ -265,13 +269,13 @@ const Projects = () => {
                   target="blank"
                 >
                   {" "}
-                  <button className="projectbtns p-2 rounded-md text-white font-semibold flex items-center gap-2">
+                  <button className="projectbtns p-2 rounded-md text-white  flex items-center gap-2">
                     <FaGithub /> Github
                   </button>
                 </a>
                 <a href="https://ayushweatherapp.onrender.com/">
                   {" "}
-                  <button className="projectbtns p-2 rounded-md text-white font-semibold flex items-center gap-2">
+                  <button className="projectbtns p-2 rounded-md text-white  flex items-center gap-2">
                     <IoLink /> Explore
                   </button>
                 </a>
@@ -286,7 +290,7 @@ const Projects = () => {
                 Resume Builder
               </p>
               <hr />
-              <p className="flex text-start font-semibold text-white p-1">
+              <p className="flex text-start  text-white p-1">
                 Developed a Resume builder with 4 unique templates and
                 re-orderable sections built using React.js which saves resumes
                 in pdf format.
@@ -308,12 +312,12 @@ const Projects = () => {
                   target="blank"
                 >
                   {" "}
-                  <button className="projectbtns p-2 rounded-md text-white font-semibold flex items-center gap-2">
+                  <button className="projectbtns p-2 rounded-md text-white  flex items-center gap-2">
                     <FaGithub /> Github
                   </button>
                 </a>
                 <a href="https://react-resume-builder.onrender.com/">
-                  <button className="projectbtns p-2 rounded-md text-white font-semibold flex items-center gap-2">
+                  <button className="projectbtns p-2 rounded-md text-white  flex items-center gap-2">
                     <IoLink /> Explore
                   </button>
                 </a>
@@ -328,7 +332,7 @@ const Projects = () => {
                 Quiz Web App
               </p>
               <hr />
-              <p className="flex text-start font-semibold text-white p-1">
+              <p className="flex text-start  text-white p-1">
                 A Quiz web application created by me during my internship at
                 salesqueen solutions. This website was made to conduct quizzes
                 to the salesqueen employees. It was made using MERN stack
@@ -352,13 +356,13 @@ const Projects = () => {
                   href="https://github.com/AyushSharma72/quizapp"
                   target="blank"
                 >
-                  <button className="projectbtns p-2 rounded-md text-white font-semibold flex items-center gap-2">
+                  <button className="projectbtns p-2 rounded-md text-white  flex items-center gap-2">
                     <FaGithub /> Github
                   </button>
                 </a>{" "}
                 <a href="https://quizwebapp.onrender.com/" target="blank">
                   {" "}
-                  <button className="projectbtns p-2 rounded-md text-white font-semibold flex items-center gap-2">
+                  <button className="projectbtns p-2 rounded-md text-white  flex items-center gap-2">
                     <IoLink /> Explore
                   </button>
                 </a>

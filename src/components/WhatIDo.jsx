@@ -20,7 +20,7 @@ const WhatIDo = () => {
             Back-end Development
           </p>
           <hr></hr>
-          <p className="text-center font-semibold text-white">
+          <p className="text-center  text-white">
             I specialize in creating robust and scalable server-side
             applications using Node.js and Express. With a focus on efficiency
             and security, seamless data management and API integration.
@@ -35,7 +35,7 @@ const WhatIDo = () => {
             Front-end Development
           </p>
           <hr></hr>
-          <p className="text-center font-semibold text-white">
+          <p className="text-center  text-white">
             I craft visually appealing and responsive web interfaces using HTML,
             CSS, and React.js. My aim is to deliver user-friendly experiences
             that are both functional and aesthetically pleasing.
@@ -50,7 +50,7 @@ const WhatIDo = () => {
             Ux Design
           </p>
           <hr></hr>
-          <p className="text-center font-semibold text-white">
+          <p className="text-center  text-white">
             I design intuitive and engaging user experiences that prioritize
             ease of use and accessibility. By focusing on user needs, I create
             interfaces that are both enjoyable and efficient to navigate.

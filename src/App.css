@@ -21,14 +21,24 @@ body {
     rgba(0, 0, 0, 0.992) 100.2%
   );
 }
+body::-webkit-scrollbar {
+  display: none;
+}
 
+#header,
 #home,
-#Whatido,
 #skills,
-#projects,
 #Experience {
   background-image: radial-gradient(
     circle 815px at 23.4% -21.8%,
+    rgba(9, 29, 85, 1) 0.2%,
+    rgba(0, 0, 0, 0) 100.2%
+  );
+}
+#Whatido,
+#projects {
+  background-image: radial-gradient(
+    circle 815px at 23.4% 121.8%,
     rgba(9, 29, 85, 1) 0.2%,
     rgba(0, 0, 0, 0) 100.2%
   );
@@ -50,6 +60,7 @@ body {
 .css-ciy9n4-MuiPaper-root-MuiAppBar-root,
 .css-jzk4qw-MuiPaper-root-MuiAppBar-root {
   background-color: transparent !important;
+
   backdrop-filter: blur(10px);
 }
 
@@ -234,35 +245,6 @@ body {
   border-image: linear-gradient(220.55deg, #ff5eef 0%, #456eff 100%) 1;
   border-image-slice: 1;
   /* border-radius: 10px; */
-}
-
-.border-gradient-left::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 1px; /* Adjust the border width as needed */
-  background: linear-gradient(220.55deg, #ff5eef 0%, #456eff 100%);
-}
-.border-gradient-left::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-
-  width: 1px; /* Adjust the border width as needed */
-  background: linear-gradient(220.55deg, #ff5eef 0%, #456eff 100%);
-}
-.border-gradient-left::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 1px; /* Adjust the border width as needed */
-  background: linear-gradient(220.55deg, #ff5eef 0%, #456eff 100%);
 }
 
 /* CSS */
@@ -466,7 +448,7 @@ body {
     top: 37%;
     left: 46%;
     transform-origin: -250px 0;
-    animation: rotate2 18s linear infinite;
+    animation: rotate2 20s linear infinite;
 
     transform: translate(-50%, -50%);
   }
@@ -516,6 +498,10 @@ body {
 
 .projectbtns {
   background-color: var(--purple-color);
+  transition: background-color 0.3s;
+}
+.projectbtns:hover {
+  background-color: #7908d5;
 }
 
 /* .swiper-pagination {
@@ -559,3 +545,5 @@ body {
     height: 555px;
   }
 }
+
+/* certificate */
