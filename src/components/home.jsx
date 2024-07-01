@@ -32,11 +32,12 @@ const Home = () => {
             both front-end and back-end technologies.
           </p>
           <div>
-            <a href="#contact">
-              <button className="getintouch p-2 mt-5">
-                <span>Get in Touch</span>
-              </button>
-            </a>
+            <button
+              className="getintouch p-2 mt-5"
+              onClick={() => scrollToSection("contact")}
+            >
+              <span>Get in Touch</span>
+            </button>
           </div>
         </div>
         <div className="sm:h-full sm:w-[35%] sm:mt-0 h-3/4 mt-[3rem] w-[30%]">

@@ -100,118 +100,115 @@ const Contact = () => {
         Contact <span className="bluegradient">Me</span>
       </p>
 
-      <div className="lg:flex lg:flex-row w-full lg:justify-around mt-16 flex flex-col-reverse xl:w-3/4">
-        <div className="flex flex-col gap-y-3 ">
-          <div className="flex gap-y-5 flex-col p-2">
-            <p className="text-4xl text-white font-bold mt-5">
-              Get in <span className="bluegradient">Touch</span>
-            </p>
+      <div className="lg:flex lg:flex-row w-full justify-around mt-16 flex flex-col-reverse  ">
+        <div className="flex gap-y-5 flex-col p-4 items-center sm:items-start">
+          <p className="text-4xl text-white font-bold mt-5">
+            Get in <span className="bluegradient">Touch</span>
+          </p>
 
-            <div className="flex items-center gap-3">
-              <MdEmail className="text-white" />
-              <p className="text-white">asharma7588@gmail.com</p>
-            </div>
-            <div className="flex items-center gap-3">
-              <FaPhone className="text-white" />
-              <p className="text-white">+91 8817687885</p>
-            </div>
+          <div className="flex items-center gap-3">
+            <MdEmail className="text-white" />
+            <p className="text-white">asharma7588@gmail.com</p>
           </div>
+          <div className="flex items-center gap-3">
+            <FaPhone className="text-white" />
+            <p className="text-white">+91 8817687885</p>
+          </div>
+          <p className="text-4xl text-white font-bold mt-5">
+            Connect With <span className="bluegradient">Me On</span>
+          </p>
 
-          <div className="flex gap-y-5 flex-col p-2">
-            <p className="text-4xl text-white font-bold mt-5">
-              Connect With <span className="bluegradient">Me On</span>
-            </p>
-
-            <div className="flex items-center gap-6">
-              <a
-                href="https://www.linkedin.com/in/ayush-sharma-a155a8267/7"
-                target="blank"
-              >
-                <FaLinkedin className="text-white text-3xl" />
-              </a>
-              <a href="https://github.com/AyushSharma72" target="blank">
-                <FaGithubSquare className="text-white text-3xl" />
-              </a>
-              <a href="https://www.instagram.com/ayush_s_72/" target="blank">
-                <FaSquareInstagram className="text-white text-3xl" />
-              </a>
-            </div>
+          <div className="flex items-center gap-6  ">
+            <a
+              href="https://www.linkedin.com/in/ayush-sharma-a155a8267/7"
+              target="blank"
+            >
+              <FaLinkedin className="text-white text-3xl" />
+            </a>
+            <a href="https://github.com/AyushSharma72" target="blank">
+              <FaGithubSquare className="text-white text-3xl" />
+            </a>
+            <a href="https://www.instagram.com/ayush_s_72/" target="blank">
+              <FaSquareInstagram className="text-white text-3xl" />
+            </a>
           </div>
         </div>
 
         {/* contact form */}
-        <form
-          className="form lg:w-1/2 flex flex-col gap-y-5 p-2 w-full "
-          ref={form}
-          onSubmit={sendEmail}
-        >
-          <Box
-            sx={{ display: "flex" }}
-            className="items-start gap-2 justify-center"
+        <div className="md:w-3/4 md:m-auto lg:w-[40%] lg:m-0">
+          <form
+            className="form flex flex-col gap-y-5 p-2"
+            ref={form}
+            onSubmit={sendEmail}
           >
-            <FaCircleUser className="text-white mt-1" />
-            <CustomTextField
-              id="outlined-basic"
-              label="Name"
-              variant="outlined"
-              className="w-[90%]"
-              name="from_name"
-              autoComplete="off"
-              required
-            />
-          </Box>
-          <Box
-            sx={{ display: "flex" }}
-            className="items-start gap-2 justify-center"
-          >
-            <MdEmail className="text-white mt-1" />
-            <CustomTextField
-              id="outlined-basic"
-              label="Email"
-              variant="outlined"
-              className="w-[90%]"
-              name="from_Email"
-              autoComplete="off"
-              type="email"
-              required
-            />
-          </Box>
-          <Box
-            sx={{ display: "flex" }}
-            className="items-start gap-2 justify-center"
-          >
-            <RiMessage2Fill className="text-white mt-1" />
-            <CustomTextField
-              id="outlined-basic"
-              label="Message"
-              variant="outlined"
-              className="w-[90%]"
-              multiline
-              rows={4}
-              type="Email"
-              name="message"
-              autoComplete="off"
-              required
-            />
-          </Box>
-          <Box
-            sx={{ display: "flex" }}
-            className="items-start gap-2 justify-center lg:justify-start ml-10"
-          >
-            <button
-              className="projectbtns p-2 rounded-md text-white font-semibold flex justify-center items-center w-1/4 gap-2"
-              type="submit"
-              disabled={loading}
+            <Box
+              sx={{ display: "flex" }}
+              className="items-start gap-2 justify-center"
             >
-              Send
-              {loading ? (
-                <PulseLoader color="#ffffff" size={5} speedMultiplier={0.8} />
-              ) : (
-                <IoIosSend />
-              )}
-            </button>
-          </Box>
-        </form>
+              <FaCircleUser className="text-white mt-1" />
+              <CustomTextField
+                id="outlined-basic"
+                label="Name"
+                variant="outlined"
+                className="w-[90%]"
+                name="from_name"
+                autoComplete="off"
+                required
+              />
+            </Box>
+            <Box
+              sx={{ display: "flex" }}
+              className="items-start gap-2 justify-center"
+            >
+              <MdEmail className="text-white mt-1" />
+              <CustomTextField
+                id="outlined-basic"
+                label="Email"
+                variant="outlined"
+                className="w-[90%]"
+                name="from_Email"
+                autoComplete="off"
+                type="email"
+                required
+              />
+            </Box>
+            <Box
+              sx={{ display: "flex" }}
+              className="items-start gap-2 justify-center"
+            >
+              <RiMessage2Fill className="text-white mt-1" />
+              <CustomTextField
+                id="outlined-basic"
+                label="Message"
+                variant="outlined"
+                className="w-[90%]"
+                multiline
+                rows={4}
+                type="Email"
+                name="message"
+                autoComplete="off"
+                required
+              />
+            </Box>
+            <Box
+              sx={{ display: "flex" }}
+              className="items-start gap-2 justify-center lg:justify-start ml-10"
+            >
+              <button
+                className="projectbtns p-2 rounded-md text-white font-semibold flex justify-center items-center sm:w-1/4 gap-2"
+                type="submit"
+                disabled={loading}
+              >
+                Send
+                {loading ? (
+                  <PulseLoader color="#ffffff" size={5} speedMultiplier={0.8} />
+                ) : (
+                  <IoIosSend />
+                )}
+              </button>
+            </Box>
+          </form>
+        </div>
       </div>
     </div>
   );
