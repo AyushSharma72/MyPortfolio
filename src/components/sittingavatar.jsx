@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { useAnimations, useFBX, useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
+
 export function SittingAvatar(props) {
   const { nodes, materials } = useGLTF("modal/Ayush2.glb");
   const group = useRef();
@@ -91,3 +92,5 @@ export function SittingAvatar(props) {
 }
 
 useGLTF.preload("modal/Ayush.glb");
+
+export default SittingAvatar;

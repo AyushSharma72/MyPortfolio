@@ -23,16 +23,17 @@ const EcomSlider = () => {
   return (
     <Carousel {...settings}>
       <div>
-        <img src={Ecom} style={contentStyle}></img>
+        <img src={Ecom} style={contentStyle} loading="lazy"></img>
       </div>
       <div>
-        <img src={Ecom1} style={contentStyle}></img>
+        <img src={Ecom1} style={contentStyle} loading="lazy"></img>
       </div>
       <div>
-        <img src={Ecom2} style={contentStyle}></img>
+        <img src={Ecom2} style={contentStyle} loading="lazy"></img>
       </div>
       <div>
-        <img src={Ecom3} style={contentStyle}></img>
+        {" "}
+        <img src={Ecom3} style={contentStyle} loading="lazy"></img>
       </div>
     </Carousel>
   );

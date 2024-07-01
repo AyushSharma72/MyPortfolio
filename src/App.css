@@ -36,7 +36,8 @@ body::-webkit-scrollbar {
   );
 }
 #Whatido,
-#projects {
+#projects,
+#contact {
   background-image: radial-gradient(
     circle 815px at 23.4% 121.8%,
     rgba(9, 29, 85, 1) 0.2%,
@@ -546,4 +547,6 @@ body::-webkit-scrollbar {
   }
 }
 
-/* certificate */
+.form {
+  background-color: transparent;
+}

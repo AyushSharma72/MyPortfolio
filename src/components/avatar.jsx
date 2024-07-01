@@ -23,7 +23,7 @@ export function Avatar(props) {
     if (stopped.current) {
       const mouseX = state.mouse.x / 8; // Adjust intensity of movement
       // const mouseY = state.mouse.y / 8;
-      target.current.set(mouseX, 1 , 1);
+      target.current.set(mouseX, 1, 1);
       currentPosition.current.lerp(target.current, 0.05); // Smooth interpolation
 
       group.current.getObjectByName("Spine").lookAt(currentPosition.current);
@@ -119,3 +119,4 @@ export function Avatar(props) {
 }
 
 useGLTF.preload("modal/Ayush.glb");
+export default Avatar;

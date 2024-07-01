@@ -24,19 +24,19 @@ const StudentCommunity = () => {
   return (
     <Carousel {...settings}>
       <div>
-        <img src={talkofcode1} style={contentStyle}></img>
+        <img src={talkofcode1} style={contentStyle} loading="lazy"></img>
       </div>
       <div>
-        <img src={talkofcode4} style={contentStyle}></img>
+        <img src={talkofcode4} style={contentStyle} loading="lazy"></img>
       </div>
       <div>
-        <img src={talkofcode5} style={contentStyle}></img>
+        <img src={talkofcode5} style={contentStyle} loading="lazy"></img>
       </div>
       <div>
-        <img src={talkofcode2} style={contentStyle}></img>
+        <img src={talkofcode2} style={contentStyle} loading="lazy"></img>
       </div>
       <div>
-        <img src={talkofcode3} style={contentStyle}></img>
+        <img src={talkofcode3} style={contentStyle} loading="lazy"></img>
       </div>
     </Carousel>
   );

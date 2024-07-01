@@ -1,7 +1,16 @@
-import React from "react";
-import BackendAnimation from "../animations/backendanimation";
-import FrontendAnimation from "../animations/frontendanimation";
-import UiuxAnimation from "../animations/uiux.animation";
+import React, { Suspense } from "react";
+// import BackendAnimation from "../animations/backendanimation";
+// import FrontendAnimation from "../animations/frontendanimation";
+// import UiuxAnimation from "../animations/uiux.animation";
+const BackendAnimation = React.lazy(
+  () => import("../animations/backendanimation")
+);
+const FrontendAnimation = React.lazy(
+  () => import("../animations/frontendanimation")
+);
+
+const UiuxAnimation = React.lazy(() => import("../animations/uiux.animation"));
+
 const WhatIDo = () => {
   return (
     <div className="flex flex-col justify-center items-center " id="Whatido">
@@ -15,7 +24,11 @@ const WhatIDo = () => {
         {/* backend */}
 
         <div className=" flex flex-col p-2 w-[280px] sm:w-[300px] gap-y-2 cardborder   duration-300">
-          <BackendAnimation />
+          <Suspense fallback={<div className="text-white">Loading...</div>}>
+            {" "}
+            <BackendAnimation />
+          </Suspense>
+
           <p className="font-bold text-xl text-center bluegradient">
             Back-end Development
           </p>
@@ -30,7 +43,11 @@ const WhatIDo = () => {
         {/* frontend */}
 
         <div className=" flex flex-col p-2 w-[280px] sm:w-[300px]  gap-y-2  cardborder duration-300">
-          <FrontendAnimation />
+          <Suspense fallback={<div className="text-white">Loading...</div>}>
+            {" "}
+            <FrontendAnimation />
+          </Suspense>
+
           <p className="font-bold text-xl text-center bluegradient">
             Front-end Development
           </p>
@@ -45,7 +62,10 @@ const WhatIDo = () => {
         {/* UIUX */}
 
         <div className=" flex flex-col p-2 w-[280px] sm:w-[300px] gap-y-2  cardborder duration-300">
-          <UiuxAnimation />
+          <Suspense fallback={<div className="text-white">Loading...</div>}>
+            <UiuxAnimation />
+          </Suspense>
+
           <p className="font-bold text-xl text-center bluegradient">
             Ux Design
           </p>

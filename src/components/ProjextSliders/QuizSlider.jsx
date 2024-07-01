@@ -21,11 +21,11 @@ const QuizSlider = () => {
   return (
     <Carousel {...settings}>
       <div>
-        <img src={quiz} style={contentStyle}></img>
+        <img src={quiz} style={contentStyle} loading="lazy"></img>
       </div>
 
       <div>
-        <img src={quiz2} style={contentStyle}></img>
+        <img src={quiz2} style={contentStyle} loading="lazy"></img>
       </div>
     </Carousel>
   );

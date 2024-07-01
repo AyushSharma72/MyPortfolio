@@ -21,10 +21,10 @@ const CodeSlider = () => {
   return (
     <Carousel {...settings}>
       <div>
-        <img src={code} style={contentStyle}></img>
+        <img src={code} style={contentStyle} loading="lazy"></img>
       </div>
       <div>
-        <img src={code2} style={contentStyle}></img>
+        <img src={code2} style={contentStyle} loading="lazy"></img>
       </div>
     </Carousel>
   );

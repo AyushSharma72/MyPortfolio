@@ -22,14 +22,14 @@ const ResumeSlider = () => {
   return (
     <Carousel {...settings}>
       <div>
-        <img src={resume} style={contentStyle}></img>
+        <img src={resume} style={contentStyle} loading="lazy"></img>
       </div>
 
       <div>
-        <img src={resume2} style={contentStyle}></img>
+        <img src={resume2} style={contentStyle} loading="lazy"></img>
       </div>
       <div>
-        <img src={resume3} style={contentStyle}></img>
+        <img src={resume3} style={contentStyle} loading="lazy"></img>
       </div>
     </Carousel>
   );
