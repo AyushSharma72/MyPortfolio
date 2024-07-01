@@ -24,7 +24,7 @@ const Skills = () => {
 
   let positionY;
   if (isSmallScreen) {
-    positionY = 0; // Position for screens <= 400px 
+    positionY = 0; // Position for screens <= 400px
   } else if (isMediumScreen) {
     positionY = -0.5; // Position for screens between 401px and 600px
   } else {
