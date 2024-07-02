@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { FaCircleChevronDown } from "react-icons/fa6";
 import { Html } from "@react-three/drei";
-import { PulseLoader } from "react-spinners";
+import { PulseLoader, ClipLoader } from "react-spinners";
 
 const Avatar = React.lazy(() => import("./avatar"));
 
