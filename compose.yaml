@@ -1,0 +1,47 @@
+# version of docker compose
+version: '3.8'
+services:
+
+# web service for react
+  web:
+  # specify on which service this react web service dependds i do not depends hence empty
+    # depends_on:
+    #   - serviceName   
+
+
+  # where the docker file is located and other files to build docker image
+    build: ./
+     
+  
+  # port mapping first number is port on machine while second number is port on the docker continer
+
+    ports:
+      - 5173:5173
+
+    volumes:
+      - .:/app
+      - /app/node_modules
+
+
+    command: sh -c "npm install && npm run dev"
+
+    environment:
+      - CHOKIDAR_USEPOLLING=true # This can help with file watching issues in some environments
+
+
+
+#whaterver is under develop section is for docker compose watch
+# rebuild the constiner
+    # develop:
+    # watch:
+    # - path: ./package.json
+    #   action: rebuild
+      
+    # - path: ./package-lock.json
+    #   action: rebuild
+
+# it wil watch chnages in these files and sync it with the container in real time
+
+    # - path: ./
+    #   target: /app
+    #   action: sync
