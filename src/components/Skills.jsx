@@ -10,6 +10,7 @@ import postman from "../assets/skillslogo/getpostman-icon.svg";
 import git from "../assets/skillslogo/giticon.svg";
 import java from "../assets/skillslogo/java.svg";
 import tailwind from "../assets/skillslogo/tailwind.svg";
+import docker from "../assets/skillslogo/docker.svg";
 import { useMediaQuery } from "react-responsive";
 import { Suspense } from "react";
 const SittingAvatar = React.lazy(() => import("./sittingavatar"));
@@ -21,6 +22,11 @@ const Skills = () => {
   const isMediumScreen = useMediaQuery({
     query: "(min-width: 401px) and (max-width: 600px)",
   });
+  const popoverStyle = {
+    backgroundColor: "#f0f0f0", // Change to your desired background color
+    padding: "10px", // Adjust padding if needed
+    borderRadius: "5px", // Adjust border radius if needed
+  };
 
   let positionY;
   if (isSmallScreen) {
@@ -68,7 +74,6 @@ const Skills = () => {
 
           <ambientLight intensity={2}></ambientLight>
         </Canvas>
-
         <img src={reactimg} className="w-[3rem] image1 " loading="lazy"></img>
         <img src={nodeimg} className="w-[3rem] image2" loading="lazy"></img>
         <img
@@ -76,13 +81,20 @@ const Skills = () => {
           className="w-[3rem] image3 bg-white"
           loading="lazy"
         ></img>
-        <img src={expressimg} className="w-[4rem] image4" loading="lazy"></img>
+        <img
+          src={expressimg}
+          className="w-[4rem] image4"
+          loading="lazy"
+          title="Express.js"
+        ></img>
+
         <img src={javascript} className="w-[3rem] image5" loading="lazy"></img>
         <img src={css} className="w-[3rem] image6" loading="lazy"></img>
         <img src={postman} className="w-[3rem] image7" loading="lazy"></img>
         <img src={git} className="w-[3rem] image8" loading="lazy"></img>
         <img src={java} className="w-[3rem] image9" loading="lazy"></img>
         <img src={tailwind} className="w-[3rem] image10" loading="lazy"></img>
+        <img src={docker} className="w-[3rem] image11" loading="lazy"></img>
       </div>
     </div>
   );

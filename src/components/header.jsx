@@ -75,7 +75,7 @@ const Header = () => {
   };
 
   const scrollToSection = (id) => {
-    const element = document.getElementById(id);  
+    const element = document.getElementById(id);
     if (element) {
       const yOffset = -100; // Offset value in pixels
       const yPosition =
@@ -165,7 +165,15 @@ const Header = () => {
       </div>
       <Box className="flex md:hidden">
         <CssBaseline />
-        <AppBar position="fixed" className="py-2" open={open}>
+        <AppBar
+          position="fixed"
+          className="py-2"
+          open={open}
+          style={{
+            backgroundColor: "transparent",
+            backdropFilter: "blur(10px)",
+          }}
+        >
           <Toolbar>
             <IconButton
               color="inherit"

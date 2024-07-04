@@ -59,12 +59,12 @@ body::-webkit-scrollbar {
 }
 
 /* small navbar */
-.css-ciy9n4-MuiPaper-root-MuiAppBar-root,
+/* .css-ciy9n4-MuiPaper-root-MuiAppBar-root,
 .css-jzk4qw-MuiPaper-root-MuiAppBar-root {
   background-color: transparent !important;
 
   backdrop-filter: blur(10px);
-}
+} */
 
 .graycolor {
   color: rgba(255, 255, 255, 0.558);
@@ -334,12 +334,13 @@ body::-webkit-scrollbar {
 .image7,
 .image8,
 .image9,
-.image10 {
+.image10,
+.image11 {
   position: absolute;
   top: 45%;
   left: 48%;
   transform-origin: -250px 0;
-  animation: rotate 20s linear infinite;
+  animation: rotate 22s linear infinite;
 
   transform: translate(-50%, -50%);
 }
@@ -374,6 +375,9 @@ body::-webkit-scrollbar {
 .image10 {
   animation-delay: -18s;
 }
+.image11 {
+  animation-delay: -20s;
+}
 
 @media (max-width: 600px) {
   .image1,
@@ -385,12 +389,13 @@ body::-webkit-scrollbar {
   .image7,
   .image8,
   .image9,
-  .image10 {
+  .image10,
+  .image11 {
     position: absolute;
     top: 45%;
     left: 46%;
     transform-origin: -250px 0;
-    animation: rotate2 20s linear infinite;
+    animation: rotate2 22s linear infinite;
 
     transform: translate(-50%, -50%);
   }
@@ -433,6 +438,9 @@ body::-webkit-scrollbar {
   .image10 {
     animation-delay: -18s;
   }
+  .image11 {
+    animation-delay: -20s;
+  }
 }
 
 @media (max-width: 400px) {
@@ -445,12 +453,13 @@ body::-webkit-scrollbar {
   .image7,
   .image8,
   .image9,
-  .image10 {
+  .image10,
+  .image11 {
     position: absolute;
     top: 37%;
     left: 46%;
     transform-origin: -250px 0;
-    animation: rotate2 20s linear infinite;
+    animation: rotate2 22s linear infinite;
 
     transform: translate(-50%, -50%);
   }
@@ -492,6 +501,9 @@ body::-webkit-scrollbar {
   }
   .image10 {
     animation-delay: -18s;
+  }
+  .image11 {
+    animation-delay: -20s;
   }
 }
 .card {
