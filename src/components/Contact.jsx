@@ -8,6 +8,7 @@ import { RiMessage2Fill } from "react-icons/ri";
 import { IoIosSend } from "react-icons/io";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithubSquare } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 import emailjs from "@emailjs/browser";
 import { FaSquareInstagram } from "react-icons/fa6";
 import { Toaster, toast } from "react-hot-toast";
@@ -130,6 +131,9 @@ const Contact = () => {
             </a>
             <a href="https://www.instagram.com/ayush_s_72/" target="blank">
               <FaSquareInstagram className="text-white text-3xl" />
+            </a>
+            <a href="https://leetcode.com/u/Ayushsharma72/" target="blank">
+              <SiLeetcode className="text-3xl bg-white p-1 rounded-lg" />
             </a>
           </div>
         </div>
