@@ -13,14 +13,24 @@ RUN npm install
 # Copy the rest of the application code to the working directory
 COPY . .
 
-# Build the application
-RUN npm run build
+# for build
 
-# Install a lightweight web server (e.g., serve) to serve the built application
-RUN npm install -g serve
+# Build the application
+RUN npm run build 
 
 # Expose the port the app runs on
 EXPOSE 5173
 
+# Install a lightweight web server (e.g., serve) to serve the built application
+RUN npm install -g serve
+
 # Command to run the application
 CMD ["serve", "-s", "dist", "-l", "5173"]
+
+
+
+#development
+
+# EXPOSE 5173
+
+# CMD ["npm", "run", "dev"]
