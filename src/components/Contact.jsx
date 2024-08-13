@@ -132,7 +132,7 @@ const Contact = () => {
             <a href="https://www.instagram.com/ayush_s_72/" target="blank">
               <FaSquareInstagram className="text-white text-3xl" />
             </a>
-            <a href="https://leetcode.com/u/Ayushsharma72/" target="blank">
+            <a href="https://leetcode.com/u/Need_Some_Logic/" target="blank">
               <SiLeetcode className="text-3xl bg-white p-1 rounded-lg" />
             </a>
           </div>
