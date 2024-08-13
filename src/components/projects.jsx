@@ -12,9 +12,11 @@ import EcomSlider from "./ProjextSliders/EcomSlider";
 import CodeSlider from "./ProjextSliders/CodeSlider";
 import ResumeSlider from "./ProjextSliders/ResumeBuilder";
 import QuizSlider from "./ProjextSliders/QuizSlider";
+import GradientSlider from "./ProjextSliders/GradientSlider";
 import lucky from "../assets/projectimages/luckdraw.png";
-import weather from "../assets/projectimages/weather.png";
+
 import { Tag } from "antd";
+import { SiNpm } from "react-icons/si";
 
 const Projects = () => {
   return (
@@ -106,6 +108,52 @@ const Projects = () => {
             </div>
           </SwiperSlide>
 
+          <SwiperSlide>
+            <div className="flex flex-col w-[300px] gap-y-2 card rounded-lg p-5 h-[475px]">
+              <GradientSlider />
+              <p className="font-bold text-xl text-center bluegradient">
+                "text-gradients" npm package
+              </p>
+              <hr />
+              <p className="flex text-start  text-white p-1">
+                I developed and published an npm package called
+                'text-gradients,' a versatile React component that allows
+                developers to easily apply stunning color gradients and images
+                to text elements without writing any css.
+              </p>
+              <div className="flex flex-col gap-y-2">
+                <p className="text-white text-left">Developed with:</p>
+                <div className="flex gap-2">
+                  <Tag color="blue">
+                    <p className="text-black font-medium">React</p>
+                  </Tag>
+                  <Tag color="lime">
+                    <p className="text-black font-medium">Css</p>
+                  </Tag>
+                </div>
+              </div>
+              <div className="flex w-full justify-start gap-5 mt-2">
+                <a
+                  href="https://www.npmjs.com/package/text-gradients"
+                  target="blank"
+                >
+                  {" "}
+                  <button className="projectbtns p-2 rounded-md text-white  flex items-center gap-2">
+                    <SiNpm /> npm
+                  </button>
+                </a>
+                <a
+                  href="https://text-gradients-demo.vercel.app/"
+                  target="_blank"
+                >
+                  {" "}
+                  <button className="projectbtns p-2 rounded-md text-white  flex items-center gap-2">
+                    <IoLink /> Explore
+                  </button>
+                </a>
+              </div>
+            </div>
+          </SwiperSlide>
           <SwiperSlide>
             <div className="flex flex-col w-[300px] gap-y-1 card  rounded-lg p-5 h-[475px]">
               <EcomSlider />
@@ -234,49 +282,6 @@ const Projects = () => {
                   {" "}
                   <button className="projectbtns p-2 rounded-md text-white  flex items-center gap-2">
                     <FaGithub /> Github
-                  </button>
-                </a>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <div className="flex flex-col w-[300px] gap-y-2 card rounded-lg p-5 h-[475px]">
-              <img src={weather} className="rounded-md h-[160px]" />
-              <p className="font-bold text-xl text-center bluegradient">
-                Weather App
-              </p>
-              <hr />
-              <p className="flex text-start  text-white p-1">
-                A weather application build using the openweathermap API in
-                which users can search for weather conditions of various
-                locations, Application was made with React.js, Node.js
-              </p>
-              <div className="flex flex-col gap-y-2">
-                <p className="text-white text-left">Developed with:</p>
-                <div className="flex gap-2">
-                  <Tag color="blue">
-                    <p className="text-black font-medium">React</p>
-                  </Tag>
-                  <Tag color="lime">
-                    <p className="text-black font-medium">Css</p>
-                  </Tag>
-                </div>
-              </div>
-              <div className="flex w-full justify-start gap-5 mt-2">
-                <a
-                  href="https://github.com/AyushSharma72/weatherApp"
-                  target="blank"
-                >
-                  {" "}
-                  <button className="projectbtns p-2 rounded-md text-white  flex items-center gap-2">
-                    <FaGithub /> Github
-                  </button>
-                </a>
-                <a href="https://ayushweatherapp.onrender.com/">
-                  {" "}
-                  <button className="projectbtns p-2 rounded-md text-white  flex items-center gap-2">
-                    <IoLink /> Explore
                   </button>
                 </a>
               </div>
