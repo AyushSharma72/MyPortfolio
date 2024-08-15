@@ -1,7 +1,4 @@
 import React, { Suspense } from "react";
-// import BackendAnimation from "../animations/backendanimation";
-// import FrontendAnimation from "../animations/frontendanimation";
-// import UiuxAnimation from "../animations/uiux.animation";
 const BackendAnimation = React.lazy(
   () => import("../animations/backendanimation")
 );

@@ -7,11 +7,8 @@ import Ecom3 from "../../assets/projectimages/Ecom3.png";
 
 const EcomSlider = () => {
   const contentStyle = {
-    margin: 0,
-    height: "160px",
     borderRadius: "5px",
-    lineHeight: "160px",
-    textAlign: "center",
+    objectFit: "cover",
   };
   const settings = {
     infinite: true,
@@ -23,17 +20,17 @@ const EcomSlider = () => {
   return (
     <Carousel {...settings}>
       <div>
-        <img src={Ecom} style={contentStyle} loading="lazy"></img>
+        <img src={Ecom} style={contentStyle} loading="lazy" alt="Ecom"></img>
       </div>
       <div>
-        <img src={Ecom1} style={contentStyle} loading="lazy"></img>
+        <img src={Ecom1} style={contentStyle} loading="lazy" alt="Ecom1"></img>
       </div>
       <div>
-        <img src={Ecom2} style={contentStyle} loading="lazy"></img>
+        <img src={Ecom2} style={contentStyle} loading="lazy" alt="Ecom2"></img>
       </div>
       <div>
         {" "}
-        <img src={Ecom3} style={contentStyle} loading="lazy"></img>
+        <img src={Ecom3} style={contentStyle} loading="lazy" alt="Ecom"></img>
       </div>
     </Carousel>
   );

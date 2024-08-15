@@ -21,6 +21,7 @@
     "@swc/wasm": "^1.6.3",
     "@vitejs/plugin-react-swc": "^3.7.0",
     "antd": "^5.18.3",
+    "depcheck": "^1.4.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.4.1",
@@ -32,9 +33,7 @@
     "swiper": "^11.1.4"
   },
   "devDependencies": {
-    "@esbuild-kit/esm-loader": "^2.6.5",
     "@types/react": "^18.2.66",
-    "@types/react-dom": "^18.2.22",
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.19",
     "eslint": "^8.57.0",

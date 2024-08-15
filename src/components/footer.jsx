@@ -18,6 +18,7 @@ const Footer = () => {
               <a
                 href="https://github.com/AyushSharma72/MyPortfolio.git"
                 target="blank"
+                aria-label="ayush repo"
               >
                 <PiGitForkBold className=" bg-white text-black text-2xl rounded-sm" />
               </a>

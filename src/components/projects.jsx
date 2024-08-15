@@ -7,12 +7,18 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { FaGithub } from "react-icons/fa";
 import { IoLink } from "react-icons/io5";
-import StudentCommunitySlider from "./ProjextSliders/StudentCommunity";
-import EcomSlider from "./ProjextSliders/EcomSlider";
-import CodeSlider from "./ProjextSliders/CodeSlider";
-import ResumeSlider from "./ProjextSliders/ResumeBuilder";
-import QuizSlider from "./ProjextSliders/QuizSlider";
-import GradientSlider from "./ProjextSliders/GradientSlider";
+
+const StudentCommunitySlider = React.lazy(() =>
+  import("./ProjextSliders/StudentCommunity")
+);
+const EcomSlider = React.lazy(() => import("./ProjextSliders/EcomSlider"));
+const CodeSlider = React.lazy(() => import("./ProjextSliders/CodeSlider"));
+const ResumeSlider = React.lazy(() => import("./ProjextSliders/ResumeBuilder"));
+const QuizSlider = React.lazy(() => import("./ProjextSliders/QuizSlider"));
+const GradientSlider = React.lazy(() =>
+  import("./ProjextSliders/GradientSlider")
+);
+
 import lucky from "../assets/projectimages/luckdraw.png";
 
 import { Tag } from "antd";
@@ -249,7 +255,11 @@ const Projects = () => {
 
           <SwiperSlide>
             <div className="flex flex-col w-[300px] gap-y-2 card rounded-lg p-5 h-[475px]">
-              <img src={lucky} className="rounded-md h-[160px]" />
+              <img
+                src={lucky}
+                className="rounded-md object-cover"
+                alt="luckdraw"
+              />
               <p className="font-bold text-xl text-center bluegradient">
                 Lucky Draw System
               </p>

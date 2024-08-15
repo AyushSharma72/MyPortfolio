@@ -8,11 +8,8 @@ import talkofcode5 from "../../assets/projectimages/talk5.png";
 
 const StudentCommunity = () => {
   const contentStyle = {
-    margin: 0,
-    height: "160px",
     borderRadius: "5px",
-    lineHeight: "160px",
-    textAlign: "center",
+    objectFit: "cover",
   };
   const settings = {
     infinite: true,
@@ -24,19 +21,44 @@ const StudentCommunity = () => {
   return (
     <Carousel {...settings}>
       <div>
-        <img src={talkofcode1} style={contentStyle} loading="lazy"></img>
+        <img
+          src={talkofcode1}
+          style={contentStyle}
+          loading="lazy"
+          alt="talkofcode1"
+        ></img>
       </div>
       <div>
-        <img src={talkofcode4} style={contentStyle} loading="lazy"></img>
+        <img
+          src={talkofcode4}
+          style={contentStyle}
+          loading="lazy"
+          alt="talkofcode2"
+        ></img>
       </div>
       <div>
-        <img src={talkofcode5} style={contentStyle} loading="lazy"></img>
+        <img
+          src={talkofcode5}
+          style={contentStyle}
+          loading="lazy"
+          alt="talkofcode3"
+        ></img>
       </div>
       <div>
-        <img src={talkofcode2} style={contentStyle} loading="lazy"></img>
+        <img
+          src={talkofcode2}
+          style={contentStyle}
+          loading="lazy"
+          alt="talkofcode4"
+        ></img>
       </div>
       <div>
-        <img src={talkofcode3} style={contentStyle} loading="lazy"></img>
+        <img
+          src={talkofcode3}
+          style={contentStyle}
+          loading="lazy"
+          alt="talkofcode5"
+        ></img>
       </div>
     </Carousel>
   );

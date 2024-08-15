@@ -12,7 +12,6 @@ import { SiLeetcode } from "react-icons/si";
 import emailjs from "@emailjs/browser";
 import { FaSquareInstagram } from "react-icons/fa6";
 import { Toaster, toast } from "react-hot-toast";
-
 import { PulseLoader } from "react-spinners";
 
 const CustomTextField = (props) => {
@@ -116,23 +115,36 @@ const Contact = () => {
             <p className="text-white">+91 8817687885</p>
           </div>
           <p className="text-4xl text-white font-bold mt-5">
-            Connect With <span className="bluegradient">Me On</span>
+            Connect With <span className="bluegradient">Me On </span>
           </p>
 
           <div className="flex items-center gap-6  ">
             <a
               href="https://www.linkedin.com/in/ayush-sharma-a155a8267/7"
               target="blank"
+              aria-label="LinkedIn Profile of Ayush Sharma"
             >
               <FaLinkedin className="text-white text-3xl" />
             </a>
-            <a href="https://github.com/AyushSharma72" target="blank">
+            <a
+              href="https://github.com/AyushSharma72"
+              target="blank"
+              aria-label="Github Profile of Ayush Sharma"
+            >
               <FaGithubSquare className="text-white text-3xl" />
             </a>
-            <a href="https://www.instagram.com/ayush_s_72/" target="blank">
+            <a
+              href="https://www.instagram.com/ayush_s_72/"
+              target="blank"
+              aria-label="Instagram Profile of Ayush Sharma"
+            >
               <FaSquareInstagram className="text-white text-3xl" />
             </a>
-            <a href="https://leetcode.com/u/Need_Some_Logic/" target="blank">
+            <a
+              href="https://leetcode.com/u/Need_Some_Logic/"
+              target="blank"
+              aria-label="Leetcode Profile of Ayush Sharma"
+            >
               <SiLeetcode className="text-3xl bg-white p-1 rounded-lg" />
             </a>
           </div>

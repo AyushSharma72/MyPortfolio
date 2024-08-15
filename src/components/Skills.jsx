@@ -74,27 +74,74 @@ const Skills = () => {
 
           <ambientLight intensity={2}></ambientLight>
         </Canvas>
-        <img src={reactimg} className="w-[3rem] image1 " loading="lazy"></img>
-        <img src={nodeimg} className="w-[3rem] image2" loading="lazy"></img>
+        <img
+          src={reactimg}
+          className="w-[3rem] image1 "
+          loading="lazy"
+          alt="image"
+        ></img>
+        <img
+          src={nodeimg}
+          className="w-[3rem] image2"
+          loading="lazy"
+          alt="image"
+        ></img>
         <img
           src={mongo}
           className="w-[3rem] image3 bg-white"
           loading="lazy"
+          alt="image"
         ></img>
         <img
           src={expressimg}
           className="w-[4rem] image4"
           loading="lazy"
           title="Express.js"
+          alt="image"
         ></img>
 
-        <img src={javascript} className="w-[3rem] image5" loading="lazy"></img>
-        <img src={css} className="w-[3rem] image6" loading="lazy"></img>
-        <img src={postman} className="w-[3rem] image7" loading="lazy"></img>
-        <img src={git} className="w-[3rem] image8" loading="lazy"></img>
-        <img src={java} className="w-[3rem] image9" loading="lazy"></img>
-        <img src={tailwind} className="w-[3rem] image10" loading="lazy"></img>
-        <img src={docker} className="w-[3rem] image11" loading="lazy"></img>
+        <img
+          src={javascript}
+          className="w-[3rem] image5"
+          loading="lazy"
+          alt="javascript"
+        ></img>
+        <img
+          src={css}
+          className="w-[3rem] image6"
+          loading="lazy"
+          alt="css"
+        ></img>
+        <img
+          src={postman}
+          className="w-[3rem] image7"
+          loading="lazy"
+          alt="postman"
+        ></img>
+        <img
+          src={git}
+          className="w-[3rem] image8"
+          loading="lazy"
+          alt="git"
+        ></img>
+        <img
+          src={java}
+          className="w-[3rem] image9"
+          loading="lazy"
+          alt="java"
+        ></img>
+        <img
+          src={tailwind}
+          className="w-[3rem] image10"
+          loading="lazy"
+          alt="tailwind"
+        ></img>
+        <img
+          src={docker}
+          className="w-[3rem] image11"
+          loading="lazy"
+          alt="docker"
+        ></img>
       </div>
     </div>
   );

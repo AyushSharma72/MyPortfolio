@@ -5,11 +5,8 @@ import gradientimges from "../../assets/projectimages/graimages.png";
 import { Carousel } from "antd";
 const GradientSlider = () => {
   const contentStyle = {
-    margin: 0,
-    height: "160px",
     borderRadius: "5px",
-    lineHeight: "160px",
-    textAlign: "center",
+    objectFit: "cover",
   };
   const settings = {
     infinite: true,
@@ -21,13 +18,13 @@ const GradientSlider = () => {
   return (
     <Carousel {...settings}>
       <div>
-        <img src={npm} style={contentStyle} loading="lazy"></img>
+        <img src={npm} style={contentStyle} loading="lazy" alt="npm"></img>
       </div>
       <div>
-        <img src={colordra} style={contentStyle} loading="lazy"></img>
+        <img src={colordra} style={contentStyle} loading="lazy" alt="colordra"></img>
       </div>
       <div>
-        <img src={gradientimges} style={contentStyle} loading="lazy"></img>
+        <img src={gradientimges} style={contentStyle} loading="lazy" alt="gradientimages"></img>
       </div>
     </Carousel>
   );

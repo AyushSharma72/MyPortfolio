@@ -6,12 +6,10 @@ import resume3 from "../../assets/projectimages/resume2.png";
 
 const ResumeSlider = () => {
   const contentStyle = {
-    margin: 0,
-    height: "160px",
     borderRadius: "5px",
-    lineHeight: "160px",
-    textAlign: "center",
+    objectFit: "cover",
   };
+
   const settings = {
     infinite: true,
     speed: 500,
@@ -22,14 +20,29 @@ const ResumeSlider = () => {
   return (
     <Carousel {...settings}>
       <div>
-        <img src={resume} style={contentStyle} loading="lazy"></img>
+        <img
+          src={resume}
+          style={contentStyle}
+          loading="lazy"
+          alt="resume"
+        ></img>
       </div>
 
       <div>
-        <img src={resume2} style={contentStyle} loading="lazy"></img>
+        <img
+          src={resume2}
+          style={contentStyle}
+          loading="lazy"
+          alt="resume2"
+        ></img>
       </div>
       <div>
-        <img src={resume3} style={contentStyle} loading="lazy"></img>
+        <img
+          src={resume3}
+          style={contentStyle}
+          loading="lazy"
+          alt="resume3"
+        ></img>
       </div>
     </Carousel>
   );

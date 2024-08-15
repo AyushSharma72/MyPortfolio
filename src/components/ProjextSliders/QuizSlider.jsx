@@ -5,11 +5,8 @@ import quiz2 from "../../assets/projectimages/quiz2.png";
 
 const QuizSlider = () => {
   const contentStyle = {
-    margin: 0,
-    height: "160px",
     borderRadius: "5px",
-    lineHeight: "160px",
-    textAlign: "center",
+    objectFit: "cover",
   };
   const settings = {
     infinite: true,
@@ -21,11 +18,11 @@ const QuizSlider = () => {
   return (
     <Carousel {...settings}>
       <div>
-        <img src={quiz} style={contentStyle} loading="lazy"></img>
+        <img src={quiz} style={contentStyle} loading="lazy" alt="quiz"></img>
       </div>
 
       <div>
-        <img src={quiz2} style={contentStyle} loading="lazy"></img>
+        <img src={quiz2} style={contentStyle} loading="lazy" alt="quiz2"></img>
       </div>
     </Carousel>
   );
