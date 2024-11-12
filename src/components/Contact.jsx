@@ -45,7 +45,7 @@ const CustomTextField = (props) => {
           },
           "& .MuiInputBase-input": {
             color: "white", // user input text color
-            backgroundColor: "inherit", // ensure background color remains the same
+            backgroundColor: "inherit", 
           },
         },
       }}

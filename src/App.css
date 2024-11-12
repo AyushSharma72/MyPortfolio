@@ -6,7 +6,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 :root {
   --purple-color: #8721da;
 }
@@ -254,9 +253,7 @@ body::-webkit-scrollbar {
 .cardborder:hover {
   transform: scale(1.03);
 
-  box-shadow:
-    0 4px 6px rgba(0, 0, 0, 0.1),
-    0 1px 3px rgba(0, 0, 0, 0.08),
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08),
     rgba(255, 94, 239, 0.8) 0px 2px 8px 0px,
     0 2px 4px -1px rgba(69, 110, 255, 0.5);
 }
@@ -336,13 +333,13 @@ body::-webkit-scrollbar {
 .image8,
 .image9,
 .image10,
-.image11 {
+.image11,
+.image12 {
   position: absolute;
   top: 45%;
   left: 48%;
   transform-origin: -250px 0;
-  animation: rotate 22s linear infinite;
-
+  animation: rotate 24s linear infinite;
   transform: translate(-50%, -50%);
 }
 
@@ -379,6 +376,9 @@ body::-webkit-scrollbar {
 .image11 {
   animation-delay: -20s;
 }
+.image12 {
+  animation-delay: -22s;
+}
 
 @media (max-width: 600px) {
   .image1,
@@ -391,12 +391,13 @@ body::-webkit-scrollbar {
   .image8,
   .image9,
   .image10,
-  .image11 {
+  .image11,
+  .image12 {
     position: absolute;
     top: 45%;
     left: 46%;
     transform-origin: -250px 0;
-    animation: rotate2 22s linear infinite;
+    animation: rotate2 24s linear infinite;
 
     transform: translate(-50%, -50%);
   }
@@ -442,6 +443,9 @@ body::-webkit-scrollbar {
   .image11 {
     animation-delay: -20s;
   }
+  .image12 {
+    animation-delay: -22s;
+  }
 }
 
 @media (max-width: 400px) {
@@ -455,12 +459,13 @@ body::-webkit-scrollbar {
   .image8,
   .image9,
   .image10,
-  .image11 {
+  .image11,
+  .image12 {
     position: absolute;
     top: 37%;
     left: 46%;
     transform-origin: -250px 0;
-    animation: rotate2 22s linear infinite;
+    animation: rotate2 24s linear infinite;
 
     transform: translate(-50%, -50%);
   }
@@ -505,6 +510,9 @@ body::-webkit-scrollbar {
   }
   .image11 {
     animation-delay: -20s;
+  }
+  .image12 {
+    animation-delay: -22s;
   }
 }
 .card {

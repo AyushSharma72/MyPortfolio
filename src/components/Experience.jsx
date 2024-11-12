@@ -14,6 +14,8 @@ import Aws from "../assets/experienceimages/Aws.jpeg";
 import SalesQueencertificate from "../assets/experienceimages/ayushcertificate.png";
 import hack from "../assets/experienceimages/hack.jpg";
 import Imccertificate from "../assets/experienceimages/Imccertificate.jpg";
+import Gssoc from "../assets/experienceimages/girlscriptsoc_logo.jpeg";
+import gssoccert from "../assets/experienceimages/gssoc.jpg";
 import { FaCode } from "react-icons/fa6";
 
 const Experience = () => {
@@ -38,6 +40,100 @@ const Experience = () => {
       </p>
 
       <VerticalTimeline>
+        {/* gssoc */}
+        <VerticalTimelineElement
+          className="vertical-timeline-element--work"
+          contentStyle={{ background: "transparent", color: "#fff" }}
+          contentArrowStyle={{ borderRight: "7px solid  #8721da" }}
+          date="May 2024 - July 2024"
+          icon={<img src={Gssoc} className="rounded-full"></img>}
+        >
+          <h3 className="vertical-timeline-element-title font-bold">
+            Open Source Contributor at GSSoC Ext 2024
+          </h3>
+
+          <h4 className="vertical-timeline-element-subtitle">
+            Top Contributor in GirlScript Summer of Code Extended 2024
+          </h4>
+
+          <p>
+            I was ranked 13<sup>th</sup> among 4000 developers
+          </p>
+          {/* tags */}
+          <div className="flex mt-1 items-center gap-1 flex-wrap">
+            <Tag
+              color="#cd201f"
+              icon={<FaCode />}
+              className="flex items-center gap-1"
+            >
+              Skills:
+            </Tag>
+
+            <Tag color="magenta">MERN</Tag>
+
+            <Tag color="orange">Git </Tag>
+            <Tag color="cyan">Github </Tag>
+          </div>
+          <div className="flex gap-x-4 items-center flex-wrap">
+            <button
+              className="projectbtns p-2 rounded-md text-white font-semibold flex items-center gap-2 mt-4"
+              onClick={() => {
+                showModal("Gssoc");
+              }}
+            >
+              View Certificate
+            </button>
+            <a href="https://shorturl.at/lybao" target="blank">
+              <button className="projectbtns p-2 rounded-md text-white font-semibold flex items-center gap-2 mt-4">
+                LinkedIn post
+              </button>
+            </a>
+          </div>
+          <Modal
+            title="Certificate"
+            open={isModalOpen}
+            keyboard={true}
+            width={800}
+            okText={null}
+            footer={null}
+            onCancel={handleCancel}
+            className="flex justify-center"
+          >
+            <Suspense fallback={<div>Loading...</div>}>
+              {certificate == "Salesqueen" ? (
+                <img
+                  src={SalesQueencertificate}
+                  className="h-[500px]"
+                  alt="Sales Queen Certificate"
+                  loading="lazy"
+                />
+              ) : certificate == "Hackhive" ? (
+                <img
+                  src={hack}
+                  className="h-[500px]"
+                  alt="Sales Queen Certificate"
+                  loading="lazy"
+                />
+              ) : certificate == "Gssoc" ? (
+                <img
+                  src={gssoccert}
+                  className="h-[500px]"
+                  alt="gssoc certificate"
+                  loading="lazy"
+                />
+              ) : (
+                <img
+                  src={Imccertificate}
+                  className="h-[500px]"
+                  alt="IMC certificate"
+                  loading="lazy"
+                />
+              )}
+            </Suspense>
+          </Modal>
+        </VerticalTimelineElement>
+
+        {/* sales queeen  */}
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           contentStyle={{ background: "transparent", color: "#fff" }}
@@ -82,43 +178,9 @@ const Experience = () => {
           >
             View Certificate
           </button>
-          <Modal
-            title="Internship certificate"
-            open={isModalOpen}
-            keyboard={true}
-            width={800}
-            okText={null}
-            footer={null}
-            onCancel={handleCancel}
-            className="flex justify-center"
-          >
-            <Suspense fallback={<div>Loading...</div>}>
-              {certificate == "Salesqueen" ? (
-                <img
-                  src={SalesQueencertificate}
-                  className="h-[500px]"
-                  alt="Sales Queen Certificate"
-                  loading="lazy"
-                />
-              ) : certificate == "Hackhive" ? (
-                <img
-                  src={hack}
-                  className="h-[500px]"
-                  alt="Sales Queen Certificate"
-                  loading="lazy"
-                />
-              ) : (
-                <img
-                  src={Imccertificate}
-                  className="h-[500px]"
-                  alt="Sales Queen Certificate"
-                  loading="lazy"
-                />
-              )}
-            </Suspense>
-          </Modal>
         </VerticalTimelineElement>
 
+        {/* hackhive */}
         <VerticalTimelineElement
           className="vertical-timeline-element--work border-gradient-left "
           contentStyle={{ background: "transparent", color: "#fff" }}
@@ -158,6 +220,7 @@ const Experience = () => {
           </button>
         </VerticalTimelineElement>
 
+        {/* imc  */}
         <VerticalTimelineElement
           className="vertical-timeline-element--work border-gradient-left "
           contentStyle={{ background: "transparent", color: "#fff" }}
@@ -209,6 +272,7 @@ const Experience = () => {
           </div>
         </VerticalTimelineElement>
 
+        {/* aws */}
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           contentStyle={{ background: "transparent", color: "#fff" }}

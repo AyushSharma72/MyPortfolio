@@ -11,6 +11,7 @@ import git from "../assets/skillslogo/giticon.svg";
 import java from "../assets/skillslogo/java.svg";
 import tailwind from "../assets/skillslogo/tailwind.svg";
 import docker from "../assets/skillslogo/docker.svg";
+import Next from "../assets/skillslogo/nextjs.svg";
 import { useMediaQuery } from "react-responsive";
 import { Suspense } from "react";
 const SittingAvatar = React.lazy(() => import("./sittingavatar"));
@@ -141,6 +142,12 @@ const Skills = () => {
           className="w-[3rem] image11"
           loading="lazy"
           alt="docker"
+        ></img>
+        <img
+          src={Next}
+          className="w-[3rem] image12 bg-white p-1"
+          loading="lazy"
+          alt="next"
         ></img>
       </div>
     </div>
