@@ -10,7 +10,7 @@ const Footer = () => {
             <span className="bluegradient">Ayush Sharma</span>
           </p>
         </div>
-        <div className="flex flex-col items-center gap-y-2 flex-wrap">
+        {/* <div className="flex flex-col items-center gap-y-2 flex-wrap">
           <p className="text-center text-white font-bold text-2xl">
             Help me to improve <br></br>{" "}
             <span className="bluegradient flex flex-col gap-y-1 sm:flex-row sm:gap-x-2 items-center">
@@ -24,7 +24,7 @@ const Footer = () => {
               </a>
             </span>
           </p>{" "}
-        </div>
+        </div> */}
       </div>
     </div>
   );

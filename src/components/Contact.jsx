@@ -108,12 +108,9 @@ const Contact = () => {
 
           <div className="flex items-center gap-3">
             <MdEmail className="text-white" />
-            <p className="text-white">asharma7588@gmail.com</p>
+            <p className="text-white text-lg">ayushsharma7103@gmail.com</p>
           </div>
-          <div className="flex items-center gap-3">
-            <FaPhone className="text-white" />
-            <p className="text-white">+91 8817687885</p>
-          </div>
+        
           <p className="text-4xl text-white font-bold mt-5">
             Connect With <span className="bluegradient">Me On </span>
           </p>

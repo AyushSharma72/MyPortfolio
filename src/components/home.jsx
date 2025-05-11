@@ -25,7 +25,7 @@ const Home = () => {
             Hi, I'm Ayush
           </p>
           <p className="text-5xl text-white font-bold tracking-normal">
-            <span className="bluegradient">Full-Stack</span> Web Developer.
+            <span className="bluegradient">Full-Stack</span> Web Developer
           </p>
           <p className="text-lg graycolor sm:w-[90%] lg:w-2/3">
             I am passionate Full-Stack Developer. With a strong foundation in

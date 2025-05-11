@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Suspense } from "react";
 import { Tag } from "antd";
 import { Modal } from "antd";
 import {
@@ -89,48 +88,6 @@ const Experience = () => {
               </button>
             </a>
           </div>
-          <Modal
-            title="Certificate"
-            open={isModalOpen}
-            keyboard={true}
-            width={800}
-            okText={null}
-            footer={null}
-            onCancel={handleCancel}
-            className="flex justify-center"
-          >
-            <Suspense fallback={<div>Loading...</div>}>
-              {certificate == "Salesqueen" ? (
-                <img
-                  src={SalesQueencertificate}
-                  className="h-[500px]"
-                  alt="Sales Queen Certificate"
-                  loading="lazy"
-                />
-              ) : certificate == "Hackhive" ? (
-                <img
-                  src={hack}
-                  className="h-[500px]"
-                  alt="Sales Queen Certificate"
-                  loading="lazy"
-                />
-              ) : certificate == "Gssoc" ? (
-                <img
-                  src={gssoccert}
-                  className="h-[500px]"
-                  alt="gssoc certificate"
-                  loading="lazy"
-                />
-              ) : (
-                <img
-                  src={Imccertificate}
-                  className="h-[500px]"
-                  alt="IMC certificate"
-                  loading="lazy"
-                />
-              )}
-            </Suspense>
-          </Modal>
         </VerticalTimelineElement>
 
         {/* sales queeen  */}
@@ -163,10 +120,9 @@ const Experience = () => {
               Skills:
             </Tag>
             <Tag color="orange" className="flex items-center">
-              Html
+              React.js
             </Tag>
             <Tag color="blue">Css</Tag>
-            <Tag color="yellow">javascript</Tag>
             <Tag color="">Bootstrap</Tag>
           </div>
 
@@ -314,6 +270,47 @@ const Experience = () => {
           </a>
         </VerticalTimelineElement>
       </VerticalTimeline>
+
+      <Modal
+        title="Certificate"
+        open={isModalOpen}
+        keyboard={true}
+        width={800}
+        okText={null}
+        footer={null}
+        onCancel={handleCancel}
+        className="flex justify-center"
+      >
+        {certificate == "Salesqueen" ? (
+          <img
+            src={SalesQueencertificate}
+            className="h-[500px]"
+            alt="Sales Queen Certificate"
+            loading="lazy"
+          />
+        ) : certificate == "Hackhive" ? (
+          <img
+            src={hack}
+            className="h-[500px]"
+            alt="Hackhive Certificate"
+            loading="lazy"
+          />
+        ) : certificate == "Gssoc" ? (
+          <img
+            src={gssoccert}
+            className="h-[500px]"
+            alt="gssoc certificate"
+            loading="lazy"
+          />
+        ) : (
+          <img
+            src={Imccertificate}
+            className="h-[500px]"
+            alt="IMC certificate"
+            loading="lazy"
+          />
+        )}
+      </Modal>
     </div>
   );
 };

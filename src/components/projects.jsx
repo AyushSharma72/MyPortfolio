@@ -14,7 +14,7 @@ const StudentCommunitySlider = React.lazy(() =>
 const EcomSlider = React.lazy(() => import("./ProjextSliders/EcomSlider"));
 const CodeSlider = React.lazy(() => import("./ProjextSliders/CodeSlider"));
 const ResumeSlider = React.lazy(() => import("./ProjextSliders/ResumeBuilder"));
-const QuizSlider = React.lazy(() => import("./ProjextSliders/QuizSlider"));
+const SkillTradeSlider = React.lazy(() => import("./ProjextSliders/SkillTradeSlider"));
 const GradientSlider = React.lazy(() =>
   import("./ProjextSliders/GradientSlider")
 );
@@ -68,24 +68,28 @@ const Projects = () => {
             },
           }}
         >
+          {/* skill trade  */}
           <SwiperSlide>
-            <div className="flex flex-col w-[300px] gap-y-2 card duration-300 rounded-lg p-5 h-[475px]">
-              <StudentCommunitySlider />
+            <div className="flex flex-col w-[300px] gap-y-2 card rounded-lg p-5 h-[475px] overflow-auto scrollbar-hide">
+              <SkillTradeSlider />
               <p className="font-bold text-xl text-center bluegradient">
-                Student Community
+                SkillTrade
               </p>
               <hr />
-              <p className="flex text-start  text-white p-1">
-                TalkOfCode is a vibrant students and tech community platform
-                where users can buy and sell tech products, seek and provide
-                solutions to technical queries, and stay updated with the latest
-                tech news.
+              <p className="flex text-start  text-white p-1 ">
+                Skill Trade is an innovative platform designed to connect two
+                primary user groups: Consumers and Service Providers. The
+                platform facilitates seamless interaction, enabling users to
+                request services and service providers to fulfill them
+                efficiently. It is a service booking platform where users can
+                book various services such as electricians, carpenters,
+                plumbers, and more.
               </p>
               <div className="flex flex-col gap-y-2">
                 <p className="text-white text-left">Developed with:</p>
                 <div className="flex gap-2">
                   <Tag color="blue">
-                    <p className="text-black font-medium">React</p>
+                    <p className="text-black font-medium">Next.js</p>
                   </Tag>
                   <Tag color="lime">
                     <p className="text-black font-medium">Nodejs</p>
@@ -93,18 +97,21 @@ const Projects = () => {
                   <Tag color="green">
                     <p className="text-black font-medium">Mongodb</p>
                   </Tag>
+                  <Tag color="green">
+                    <p className="text-black font-medium">Botpress</p>
+                  </Tag>
                 </div>
               </div>
               <div className="flex w-full justify-start gap-5 mt-2">
                 <a
-                  href="https://github.com/AyushSharma72/AyushReact.git"
+                  href="https://github.com/AyushSharma72/quizapp"
                   target="blank"
                 >
                   <button className="projectbtns p-2 rounded-md text-white  flex items-center gap-2">
                     <FaGithub /> Github
                   </button>
                 </a>{" "}
-                <a href="https://ayush-react.vercel.app/" target="blank">
+                <a href="https://quizwebapp.onrender.com/" target="blank">
                   {" "}
                   <button className="projectbtns p-2 rounded-md text-white  flex items-center gap-2">
                     <IoLink /> Explore
@@ -113,7 +120,7 @@ const Projects = () => {
               </div>
             </div>
           </SwiperSlide>
-
+          {/* npm package  */}
           <SwiperSlide>
             <div className="flex flex-col w-[300px] gap-y-2 card rounded-lg p-5 h-[475px]">
               <GradientSlider />
@@ -160,6 +167,101 @@ const Projects = () => {
               </div>
             </div>
           </SwiperSlide>
+
+          {/* lucky draw  */}
+          <SwiperSlide>
+            <div className="flex flex-col w-[300px] gap-y-2 card rounded-lg p-5 h-[475px]">
+              <img
+                src={lucky}
+                className="rounded-md object-cover"
+                alt="luckdraw"
+              />
+              <p className="font-bold text-xl text-center bluegradient">
+                Lucky Draw System
+              </p>
+              <hr />
+              <p className="flex text-start  text-white p-1">
+                A website developed by me during my internship in nagarnigam to
+                conduct lucky draw in indore. Which generated random winners
+                from the database of nagarnigam replacing the traditional excel
+                system
+              </p>
+              <div className="flex flex-col gap-y-2">
+                <p className="text-white text-left">Developed with:</p>
+                <div className="flex gap-2">
+                  <Tag color="blue">
+                    <p className="text-black font-medium">Next.js</p>
+                  </Tag>
+                  <Tag color="lime">
+                    <p className="text-black font-medium">Nodejs</p>
+                  </Tag>
+                  <Tag color="green">
+                    <p className="text-black font-medium">Mongodb</p>
+                  </Tag>
+                </div>
+              </div>
+              <div className="flex w-full justify-start gap-5 mt-2">
+                <a
+                  href="https://github.com/VinayLodhi1712/IMC-Lucky-Draw"
+                  target="blank"
+                >
+                  {" "}
+                  <button className="projectbtns p-2 rounded-md text-white  flex items-center gap-2">
+                    <FaGithub />Github
+                  </button>
+                </a>
+              </div>
+            </div>
+          </SwiperSlide>
+
+          {/*StudentCommunity */}
+          <SwiperSlide>
+            <div className="flex flex-col w-[300px] gap-y-2 card duration-300 rounded-lg p-5 h-[475px]">
+              <StudentCommunitySlider />
+              <p className="font-bold text-xl text-center bluegradient">
+                Student Community
+              </p>
+              <hr />
+              <p className="flex text-start  text-white p-1">
+                TalkOfCode is a vibrant students and tech community platform
+                where users can buy and sell tech products, seek and provide
+                solutions to technical queries, and stay updated with the latest
+                tech news.
+              </p>
+              <div className="flex flex-col gap-y-2">
+                <p className="text-white text-left">Developed with:</p>
+                <div className="flex gap-2">
+                  <Tag color="blue">
+                    <p className="text-black font-medium">React</p>
+                  </Tag>
+                  <Tag color="lime">
+                    <p className="text-black font-medium">Nodejs</p>
+                  </Tag>
+                  <Tag color="green">
+                    <p className="text-black font-medium">Mongodb</p>
+                  </Tag>
+                </div>
+              </div>
+              <div className="flex w-full justify-start gap-5 mt-2">
+                <a
+                  href="https://github.com/AyushSharma72/AyushReact.git"
+                  target="blank"
+                >
+                  <button className="projectbtns p-2 rounded-md text-white  flex items-center gap-2">
+                    <FaGithub /> Github
+                  </button>
+                </a>{" "}
+                <a href="https://ayush-react.vercel.app/" target="blank">
+                  {" "}
+                  <button className="projectbtns p-2 rounded-md text-white  flex items-center gap-2">
+                    <IoLink /> Explore
+                  </button>
+                </a>
+              </div>
+            </div>
+          </SwiperSlide>
+
+          {/* ecom website  */}
           <SwiperSlide>
             <div className="flex flex-col w-[300px] gap-y-1 card  rounded-lg p-5 h-[475px]">
               <EcomSlider />
@@ -206,6 +308,7 @@ const Projects = () => {
             </div>
           </SwiperSlide>
 
+          {/* code compiler  */}
           <SwiperSlide>
             <div className="flex flex-col w-[300px] gap-y-1 card duration-300 rounded-lg p-5 h-[475px]">
               <CodeSlider />
@@ -254,51 +357,6 @@ const Projects = () => {
           </SwiperSlide>
 
           <SwiperSlide>
-            <div className="flex flex-col w-[300px] gap-y-2 card rounded-lg p-5 h-[475px]">
-              <img
-                src={lucky}
-                className="rounded-md object-cover"
-                alt="luckdraw"
-              />
-              <p className="font-bold text-xl text-center bluegradient">
-                Lucky Draw System
-              </p>
-              <hr />
-              <p className="flex text-start  text-white p-1">
-                A website developed by me during my internship in nagarnigam to
-                conduct lucky draw in indore. Which generated random winners
-                from the database of nagarnigam replacing the traditional excel
-                system
-              </p>
-              <div className="flex flex-col gap-y-2">
-                <p className="text-white text-left">Developed with:</p>
-                <div className="flex gap-2">
-                  <Tag color="blue">
-                    <p className="text-black font-medium">React</p>
-                  </Tag>
-                  <Tag color="lime">
-                    <p className="text-black font-medium">Nodejs</p>
-                  </Tag>
-                  <Tag color="green">
-                    <p className="text-black font-medium">Mongodb</p>
-                  </Tag>
-                </div>
-              </div>
-              <div className="flex w-full justify-start gap-5 mt-2">
-                <a
-                  href="https://github.com/AyushSharma72/Luckydraw"
-                  target="blank"
-                >
-                  {" "}
-                  <button className="projectbtns p-2 rounded-md text-white  flex items-center gap-2">
-                    <FaGithub /> Github
-                  </button>
-                </a>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide>
             <div className="flex flex-col w-[300px] gap-y-1 card rounded-lg p-5 h-[475px]">
               <ResumeSlider />
               <p className="font-bold text-xl text-center bluegradient">
@@ -332,51 +390,6 @@ const Projects = () => {
                   </button>
                 </a>
                 <a href="https://react-resume-builder.onrender.com/">
-                  <button className="projectbtns p-2 rounded-md text-white  flex items-center gap-2">
-                    <IoLink /> Explore
-                  </button>
-                </a>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <div className="flex flex-col w-[300px] gap-y-2 card rounded-lg p-5 h-[475px]">
-              <QuizSlider />
-              <p className="font-bold text-xl text-center bluegradient">
-                Quiz Web App
-              </p>
-              <hr />
-              <p className="flex text-start  text-white p-1">
-                A Quiz web application created by me during my internship at
-                salesqueen solutions. This website was made to conduct quizzes
-                to the salesqueen employees. It was made using MERN stack
-              </p>
-              <div className="flex flex-col gap-y-2">
-                <p className="text-white text-left">Developed with:</p>
-                <div className="flex gap-2">
-                  <Tag color="blue">
-                    <p className="text-black font-medium">React</p>
-                  </Tag>
-                  <Tag color="lime">
-                    <p className="text-black font-medium">Nodejs</p>
-                  </Tag>
-                  <Tag color="green">
-                    <p className="text-black font-medium">Mongodb</p>
-                  </Tag>
-                </div>
-              </div>
-              <div className="flex w-full justify-start gap-5 mt-2">
-                <a
-                  href="https://github.com/AyushSharma72/quizapp"
-                  target="blank"
-                >
-                  <button className="projectbtns p-2 rounded-md text-white  flex items-center gap-2">
-                    <FaGithub /> Github
-                  </button>
-                </a>{" "}
-                <a href="https://quizwebapp.onrender.com/" target="blank">
-                  {" "}
                   <button className="projectbtns p-2 rounded-md text-white  flex items-center gap-2">
                     <IoLink /> Explore
                   </button>
