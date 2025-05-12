@@ -48,4 +48,4 @@ const ResumeSlider = () => {
   );
 };
 
-export default ResumeSlider;
+export default React.memo(ResumeSlider);

@@ -30,4 +30,4 @@ const GradientSlider = () => {
   );
 };
 
-export default GradientSlider;
+export default React.memo(GradientSlider);

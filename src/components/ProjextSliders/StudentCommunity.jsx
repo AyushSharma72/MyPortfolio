@@ -64,4 +64,4 @@ const StudentCommunity = () => {
   );
 };
 
-export default StudentCommunity;
+export default React.memo(StudentCommunity);

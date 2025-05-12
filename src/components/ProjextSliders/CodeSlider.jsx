@@ -27,4 +27,4 @@ const CodeSlider = () => {
   );
 };
 
-export default CodeSlider;
+export default React.memo(CodeSlider);

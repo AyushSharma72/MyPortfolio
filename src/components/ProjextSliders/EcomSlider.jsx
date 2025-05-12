@@ -36,4 +36,4 @@ const EcomSlider = () => {
   );
 };
 
-export default EcomSlider;
+export default React.memo(EcomSlider);

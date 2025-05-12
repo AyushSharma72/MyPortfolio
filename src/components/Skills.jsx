@@ -23,20 +23,31 @@ const Skills = () => {
   const isMediumScreen = useMediaQuery({
     query: "(min-width: 401px) and (max-width: 600px)",
   });
-  const popoverStyle = {
-    backgroundColor: "#f0f0f0", // Change to your desired background color
-    padding: "10px", // Adjust padding if needed
-    borderRadius: "5px", // Adjust border radius if needed
-  };
 
-  let positionY;
-  if (isSmallScreen) {
-    positionY = 0; // Position for screens <= 400px
-  } else if (isMediumScreen) {
-    positionY = -0.5; // Position for screens between 401px and 600px
-  } else {
-    positionY = -0.5; // Default position for screens > 600px
-  }
+  
+
+ const positionY = React.useMemo(() => {
+   if (isSmallScreen) return 0;
+   if (isMediumScreen) return -0.5;
+   return -0.5;
+ }, [isSmallScreen, isMediumScreen]);
+
+ // skill icons 
+const skillIcons = [
+  { src: reactimg, className: "image1", alt: "react" },
+  { src: nodeimg, className: "image2", alt: "node" },
+  { src: mongo, className: "image3 bg-white", alt: "mongo" },
+  { src: expressimg, className: "image4", alt: "express" },
+  { src: javascript, className: "image5", alt: "javascript" },
+  { src: css, className: "image6", alt: "css" },
+  { src: postman, className: "image7", alt: "postman" },
+  { src: git, className: "image8", alt: "git" },
+  { src: java, className: "image9", alt: "java" },
+  { src: tailwind, className: "image10", alt: "tailwind" },
+  { src: docker, className: "image11", alt: "docker" },
+  { src: Next, className: "image12 bg-white p-1", alt: "next" },
+];
+
   return (
     <div
       className="flex flex-col items-center h-[600px] sm:h-screen "
@@ -75,80 +86,15 @@ const Skills = () => {
 
           <ambientLight intensity={2}></ambientLight>
         </Canvas>
-        <img
-          src={reactimg}
-          className="w-[3rem] image1 "
-          loading="lazy"
-          alt="image"
-        ></img>
-        <img
-          src={nodeimg}
-          className="w-[3rem] image2"
-          loading="lazy"
-          alt="image"
-        ></img>
-        <img
-          src={mongo}
-          className="w-[3rem] image3 bg-white"
-          loading="lazy"
-          alt="image"
-        ></img>
-        <img
-          src={expressimg}
-          className="w-[4rem] image4"
-          loading="lazy"
-          title="Express.js"
-          alt="image"
-        ></img>
-
-        <img
-          src={javascript}
-          className="w-[3rem] image5"
-          loading="lazy"
-          alt="javascript"
-        ></img>
-        <img
-          src={css}
-          className="w-[3rem] image6"
-          loading="lazy"
-          alt="css"
-        ></img>
-        <img
-          src={postman}
-          className="w-[3rem] image7"
-          loading="lazy"
-          alt="postman"
-        ></img>
-        <img
-          src={git}
-          className="w-[3rem] image8"
-          loading="lazy"
-          alt="git"
-        ></img>
-        <img
-          src={java}
-          className="w-[3rem] image9"
-          loading="lazy"
-          alt="java"
-        ></img>
-        <img
-          src={tailwind}
-          className="w-[3rem] image10"
-          loading="lazy"
-          alt="tailwind"
-        ></img>
-        <img
-          src={docker}
-          className="w-[3rem] image11"
-          loading="lazy"
-          alt="docker"
-        ></img>
-        <img
-          src={Next}
-          className="w-[3rem] image12 bg-white p-1"
-          loading="lazy"
-          alt="next"
-        ></img>
+        {skillIcons.map(({ src, className, alt }, i) => (
+          <img
+            key={i}
+            src={src}
+            className={`w-[3rem] ${className}`}
+            loading="lazy"
+            alt={alt}
+          />
+        ))}
       </div>
     </div>
   );

@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import { MdEmail } from "react-icons/md";
-import { FaPhone } from "react-icons/fa6";
 import { FaCircleUser } from "react-icons/fa6";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";

@@ -1,5 +1,5 @@
 import React from "react";
-import { PiGitForkBold } from "react-icons/pi";
+// import { PiGitForkBold } from "react-icons/pi";
 const Footer = () => {
   return (
     <div id="footer" className=" pt-10  pb-5 ">
