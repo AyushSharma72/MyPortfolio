@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -14,12 +14,16 @@ const StudentCommunitySlider = React.lazy(() =>
 const EcomSlider = React.lazy(() => import("./ProjextSliders/EcomSlider"));
 const CodeSlider = React.lazy(() => import("./ProjextSliders/CodeSlider"));
 const ResumeSlider = React.lazy(() => import("./ProjextSliders/ResumeBuilder"));
-const SkillTradeSlider = React.lazy(() => import("./ProjextSliders/SkillTradeSlider"));
+const SkillTradeSlider = React.lazy(() =>
+  import("./ProjextSliders/SkillTradeSlider")
+);
 const GradientSlider = React.lazy(() =>
   import("./ProjextSliders/GradientSlider")
 );
 
-import lucky from "../assets/projectimages/luckdraw.png";
+const LuckyDrawSlider = React.lazy(() =>
+  import("./ProjextSliders/LuckyDrawsSlider")
+);
 
 import { Tag } from "antd";
 import { SiNpm } from "react-icons/si";
@@ -71,7 +75,11 @@ const Projects = () => {
           {/* skill trade  */}
           <SwiperSlide>
             <div className="flex flex-col w-[300px] gap-y-2 card rounded-lg p-5 h-[475px] overflow-auto scrollbar-hide">
-              <SkillTradeSlider />
+              <Suspense fallback={<div>Loading SkillTrade...</div>}>
+                {" "}
+                <SkillTradeSlider />
+              </Suspense>
+
               <p className="font-bold text-xl text-center bluegradient">
                 SkillTrade
               </p>
@@ -104,14 +112,17 @@ const Projects = () => {
               </div>
               <div className="flex w-full justify-start gap-5 mt-2">
                 <a
-                  href="https://github.com/AyushSharma72/quizapp"
+                  href="https://github.com/AyushSharma72/SkillTrade"
                   target="blank"
                 >
                   <button className="projectbtns p-2 rounded-md text-white  flex items-center gap-2">
                     <FaGithub /> Github
                   </button>
                 </a>{" "}
-                <a href="https://quizwebapp.onrender.com/" target="blank">
+                <a
+                  href="https://skill-trade-next-15.vercel.app/"
+                  target="blank"
+                >
                   {" "}
                   <button className="projectbtns p-2 rounded-md text-white  flex items-center gap-2">
                     <IoLink /> Explore
@@ -120,10 +131,13 @@ const Projects = () => {
               </div>
             </div>
           </SwiperSlide>
+
           {/* npm package  */}
           <SwiperSlide>
             <div className="flex flex-col w-[300px] gap-y-2 card rounded-lg p-5 h-[475px]">
-              <GradientSlider />
+              <Suspense fallback={<div>Loading GradientSlider...</div>}>
+                <GradientSlider />
+              </Suspense>
               <p className="font-bold text-xl text-center bluegradient">
                 "text-gradients" npm package
               </p>
@@ -171,11 +185,9 @@ const Projects = () => {
           {/* lucky draw  */}
           <SwiperSlide>
             <div className="flex flex-col w-[300px] gap-y-2 card rounded-lg p-5 h-[475px]">
-              <img
-                src={lucky}
-                className="rounded-md object-cover"
-                alt="luckdraw"
-              />
+              <Suspense fallback={<div>Loading Lucky Draw...</div>}>
+                <LuckyDrawSlider />
+              </Suspense>
               <p className="font-bold text-xl text-center bluegradient">
                 Lucky Draw System
               </p>
@@ -207,7 +219,8 @@ const Projects = () => {
                 >
                   {" "}
                   <button className="projectbtns p-2 rounded-md text-white  flex items-center gap-2">
-                    <FaGithub />Github
+                    <FaGithub />
+                    Github
                   </button>
                 </a>
               </div>
@@ -217,7 +230,9 @@ const Projects = () => {
           {/*StudentCommunity */}
           <SwiperSlide>
             <div className="flex flex-col w-[300px] gap-y-2 card duration-300 rounded-lg p-5 h-[475px]">
-              <StudentCommunitySlider />
+              <Suspense fallback={<div>Loading Student Community...</div>}>
+                <StudentCommunitySlider />
+              </Suspense>
               <p className="font-bold text-xl text-center bluegradient">
                 Student Community
               </p>
@@ -311,7 +326,9 @@ const Projects = () => {
           {/* code compiler  */}
           <SwiperSlide>
             <div className="flex flex-col w-[300px] gap-y-1 card duration-300 rounded-lg p-5 h-[475px]">
-              <CodeSlider />
+              <Suspense fallback={<div>Loading Code Compiler...</div>}>
+                <CodeSlider />
+              </Suspense>
               <p className="font-bold text-xl text-center bluegradient">
                 Online Code Compiler
               </p>
@@ -358,7 +375,9 @@ const Projects = () => {
 
           <SwiperSlide>
             <div className="flex flex-col w-[300px] gap-y-1 card rounded-lg p-5 h-[475px]">
-              <ResumeSlider />
+              <Suspense fallback={<div>Loading Resume Builder...</div>}>
+                <ResumeSlider />
+              </Suspense>
               <p className="font-bold text-xl text-center bluegradient">
                 Resume Builder
               </p>
