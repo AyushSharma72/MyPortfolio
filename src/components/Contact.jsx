@@ -61,7 +61,7 @@ const Contact = () => {
     Setloading(true);
 
     emailjs
-      .sendForm("service_j5o6t4m", "template_5ll60oc", form.current, {
+      .sendForm("service_rhx8hgl", "template_5ll60oc", form.current, {
         publicKey: "wNINzmQAcxqh5G5vZ",
       })
       .then(
