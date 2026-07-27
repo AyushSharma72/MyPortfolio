@@ -24,29 +24,27 @@ const Skills = () => {
     query: "(min-width: 401px) and (max-width: 600px)",
   });
 
-  
+  const positionY = React.useMemo(() => {
+    if (isSmallScreen) return 0;
+    if (isMediumScreen) return -0.5;
+    return -0.5;
+  }, [isSmallScreen, isMediumScreen]);
 
- const positionY = React.useMemo(() => {
-   if (isSmallScreen) return 0;
-   if (isMediumScreen) return -0.5;
-   return -0.5;
- }, [isSmallScreen, isMediumScreen]);
-
- // skill icons 
-const skillIcons = [
-  { src: reactimg, className: "image1", alt: "react" },
-  { src: nodeimg, className: "image2", alt: "node" },
-  { src: mongo, className: "image3 bg-white", alt: "mongo" },
-  { src: expressimg, className: "image4", alt: "express" },
-  { src: javascript, className: "image5", alt: "javascript" },
-  { src: css, className: "image6", alt: "css" },
-  { src: postman, className: "image7", alt: "postman" },
-  { src: git, className: "image8", alt: "git" },
-  { src: java, className: "image9", alt: "java" },
-  { src: tailwind, className: "image10", alt: "tailwind" },
-  { src: docker, className: "image11", alt: "docker" },
-  { src: Next, className: "image12 bg-white p-1", alt: "next" },
-];
+  // skill icons
+  const skillIcons = [
+    { src: reactimg, className: "image1", alt: "react" },
+    { src: nodeimg, className: "image2", alt: "node" },
+    { src: mongo, className: "image3 bg-white", alt: "mongo" },
+    { src: expressimg, className: "image4", alt: "express" },
+    { src: javascript, className: "image5", alt: "javascript" },
+    { src: css, className: "image6", alt: "css" },
+    { src: postman, className: "image7", alt: "postman" },
+    { src: git, className: "image8", alt: "git" },
+    { src: java, className: "image9", alt: "java" },
+    { src: tailwind, className: "image10", alt: "tailwind" },
+    { src: docker, className: "image11", alt: "docker" },
+    { src: Next, className: "image12 bg-white p-1", alt: "next" },
+  ];
 
   return (
     <div

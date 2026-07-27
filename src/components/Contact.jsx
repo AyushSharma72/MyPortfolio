@@ -5,8 +5,7 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { RiMessage2Fill } from "react-icons/ri";
 import { IoIosSend } from "react-icons/io";
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithubSquare } from "react-icons/fa";
+import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 import emailjs from "@emailjs/browser";
 import { FaSquareInstagram } from "react-icons/fa6";
@@ -107,16 +106,19 @@ const Contact = () => {
 
           <div className="flex items-center gap-3">
             <MdEmail className="text-white" />
-            <p className="text-white text-lg">ayushsharma7103@gmail.com</p>
+            <p className="text-white text-lg break-all">
+              ayushsharma7103@gmail.com
+            </p>
           </div>
-        
+          <p className="text-white text-lg opacity-80">Indore, Madhya Pradesh</p>
+
           <p className="text-4xl text-white font-bold mt-5">
             Connect With <span className="bluegradient">Me On </span>
           </p>
 
           <div className="flex items-center gap-6  ">
             <a
-              href="https://www.linkedin.com/in/ayush-sharma-a155a8267/7"
+              href="https://www.linkedin.com/in/ayush-sharma-a155a8267"
               target="blank"
               aria-label="LinkedIn Profile of Ayush Sharma"
             >

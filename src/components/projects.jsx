@@ -24,6 +24,9 @@ const GradientSlider = React.lazy(() =>
 const LuckyDrawSlider = React.lazy(() =>
   import("./ProjextSliders/LuckyDrawsSlider")
 );
+const CrossCanalsSlider = React.lazy(() =>
+  import("./ProjextSliders/CrossCanalsSlider")
+);
 
 import { Tag } from "antd";
 import { SiNpm } from "react-icons/si";
@@ -51,7 +54,7 @@ const Projects = () => {
             slideShadows: true,
           }}
           modules={[EffectCoverflow, Pagination, Navigation]}
-          initialSlide={1}
+          initialSlide={0}
           breakpoints={{
             0: {
               slidesPerView: 1,
@@ -63,15 +66,161 @@ const Projects = () => {
             },
             768: {
               slidesPerView: 2,
-              initialSlide: 1,
+              initialSlide: 0,
             },
 
             1440: {
               slidesPerView: 3,
-              initialSlide: 1,
+              initialSlide: 0,
             },
           }}
         >
+          {/* CrossCanals */}
+          <SwiperSlide>
+            <div className="flex flex-col w-[300px] gap-y-2 card rounded-lg p-5 h-[475px] overflow-auto scrollbar-hide">
+              <Suspense fallback={<div>Loading CrossCanals...</div>}>
+                <CrossCanalsSlider />
+              </Suspense>
+
+              <p className="font-bold text-xl text-center bluegradient">
+                CrossCanals
+              </p>
+              <hr />
+              <p className="flex text-start  text-white p-1 ">
+                Responsive B2B e-commerce frontend in React.js with
+                role-specific dashboards for 3 user roles, consuming 25+ REST
+                APIs. Solved checkout race conditions with MongoDB transactions,
+                secured the platform with JWT + refresh token rotation, and
+                shipped a custom order feature for personalized image uploads —
+                cutting load time ~30%.
+              </p>
+              <div className="flex flex-col gap-y-2">
+                <p className="text-white text-left">Developed with:</p>
+                <div className="flex gap-2 flex-wrap">
+                  <Tag color="blue">
+                    <p className="text-black font-medium">React.js</p>
+                  </Tag>
+                  <Tag color="lime">
+                    <p className="text-black font-medium">Node.js</p>
+                  </Tag>
+                  <Tag color="green">
+                    <p className="text-black font-medium">MongoDB</p>
+                  </Tag>
+                  <Tag color="orange">
+                    <p className="text-black font-medium">JWT</p>
+                  </Tag>
+                </div>
+              </div>
+              <div className="flex w-full justify-start gap-5 mt-2">
+                <a href="https://crosscanals.com" target="blank">
+                  <button className="projectbtns p-2 rounded-md text-white  flex items-center gap-2">
+                    <IoLink /> Explore
+                  </button>
+                </a>
+              </div>
+            </div>
+          </SwiperSlide>
+
+          {/* npm package  */}
+          <SwiperSlide>
+            <div className="flex flex-col w-[300px] gap-y-2 card rounded-lg p-5 h-[475px]">
+              <Suspense fallback={<div>Loading GradientSlider...</div>}>
+                <GradientSlider />
+              </Suspense>
+              <p className="font-bold text-xl text-center bluegradient">
+                text-gradients (NPM)
+              </p>
+              <hr />
+              <p className="flex text-start  text-white p-1">
+                Developed and published a reusable React component package on
+                NPM with 1000+ total downloads. Modular, maintainable
+                architecture for easy integration — apply stunning color
+                gradients and images to text without writing CSS.
+              </p>
+              <div className="flex flex-col gap-y-2">
+                <p className="text-white text-left">Developed with:</p>
+                <div className="flex gap-2">
+                  <Tag color="blue">
+                    <p className="text-black font-medium">React</p>
+                  </Tag>
+                  <Tag color="lime">
+                    <p className="text-black font-medium">Css</p>
+                  </Tag>
+                </div>
+              </div>
+              <div className="flex w-full justify-start gap-5 mt-2">
+                <a
+                  href="https://www.npmjs.com/package/text-gradients"
+                  target="blank"
+                >
+                  {" "}
+                  <button className="projectbtns p-2 rounded-md text-white  flex items-center gap-2">
+                    <SiNpm /> npm
+                  </button>
+                </a>
+                <a
+                  href="https://text-gradients-demo.vercel.app/"
+                  target="_blank"
+                >
+                  {" "}
+                  <button className="projectbtns p-2 rounded-md text-white  flex items-center gap-2">
+                    <IoLink /> Explore
+                  </button>
+                </a>
+              </div>
+            </div>
+          </SwiperSlide>
+
+          {/* lucky draw  */}
+          <SwiperSlide>
+            <div className="flex flex-col w-[300px] gap-y-2 card rounded-lg p-5 h-[475px]">
+              <Suspense fallback={<div>Loading Lucky Draw...</div>}>
+                <LuckyDrawSlider />
+              </Suspense>
+              <p className="font-bold text-xl text-center bluegradient">
+                Lucky Draw Software
+              </p>
+              <hr />
+              <p className="flex text-start  text-white p-1">
+                Replaced a manual Excel-based lucky draw with a scalable web
+                app handling 120K+ entries in MongoDB. Cut winner selection from
+                nearly 1 minute to ~2 seconds using optimized random sampling,
+                with backend APIs and admin workflows for real-time draws.
+              </p>
+              <div className="flex flex-col gap-y-2">
+                <p className="text-white text-left">Developed with:</p>
+                <div className="flex gap-2">
+                  <Tag color="blue">
+                    <p className="text-black font-medium">Next.js</p>
+                  </Tag>
+                  <Tag color="lime">
+                    <p className="text-black font-medium">Nodejs</p>
+                  </Tag>
+                  <Tag color="green">
+                    <p className="text-black font-medium">Mongodb</p>
+                  </Tag>
+                </div>
+              </div>
+              <div className="flex w-full justify-start gap-5 mt-2">
+                <a
+                  href="https://github.com/VinayLodhi1712/IMC-Lucky-Draw"
+                  target="blank"
+                >
+                  {" "}
+                  <button className="projectbtns p-2 rounded-md text-white  flex items-center gap-2">
+                    <FaGithub />
+                    Github
+                  </button>
+                </a>
+                <a href="https://imc-lucky-draw.vercel.app" target="blank">
+                  <button className="projectbtns p-2 rounded-md text-white  flex items-center gap-2">
+                    <IoLink /> Explore
+                  </button>
+                </a>
+              </div>
+            </div>
+          </SwiperSlide>
+
           {/* skill trade  */}
           <SwiperSlide>
             <div className="flex flex-col w-[300px] gap-y-2 card rounded-lg p-5 h-[475px] overflow-auto scrollbar-hide">
@@ -126,101 +275,6 @@ const Projects = () => {
                   {" "}
                   <button className="projectbtns p-2 rounded-md text-white  flex items-center gap-2">
                     <IoLink /> Explore
-                  </button>
-                </a>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          {/* npm package  */}
-          <SwiperSlide>
-            <div className="flex flex-col w-[300px] gap-y-2 card rounded-lg p-5 h-[475px]">
-              <Suspense fallback={<div>Loading GradientSlider...</div>}>
-                <GradientSlider />
-              </Suspense>
-              <p className="font-bold text-xl text-center bluegradient">
-                "text-gradients" npm package
-              </p>
-              <hr />
-              <p className="flex text-start  text-white p-1">
-                I developed and published an npm package called
-                'text-gradients,' a versatile React component that allows
-                developers to easily apply stunning color gradients and images
-                to text elements without writing any css.
-              </p>
-              <div className="flex flex-col gap-y-2">
-                <p className="text-white text-left">Developed with:</p>
-                <div className="flex gap-2">
-                  <Tag color="blue">
-                    <p className="text-black font-medium">React</p>
-                  </Tag>
-                  <Tag color="lime">
-                    <p className="text-black font-medium">Css</p>
-                  </Tag>
-                </div>
-              </div>
-              <div className="flex w-full justify-start gap-5 mt-2">
-                <a
-                  href="https://www.npmjs.com/package/text-gradients"
-                  target="blank"
-                >
-                  {" "}
-                  <button className="projectbtns p-2 rounded-md text-white  flex items-center gap-2">
-                    <SiNpm /> npm
-                  </button>
-                </a>
-                <a
-                  href="https://text-gradients-demo.vercel.app/"
-                  target="_blank"
-                >
-                  {" "}
-                  <button className="projectbtns p-2 rounded-md text-white  flex items-center gap-2">
-                    <IoLink /> Explore
-                  </button>
-                </a>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          {/* lucky draw  */}
-          <SwiperSlide>
-            <div className="flex flex-col w-[300px] gap-y-2 card rounded-lg p-5 h-[475px]">
-              <Suspense fallback={<div>Loading Lucky Draw...</div>}>
-                <LuckyDrawSlider />
-              </Suspense>
-              <p className="font-bold text-xl text-center bluegradient">
-                Lucky Draw System
-              </p>
-              <hr />
-              <p className="flex text-start  text-white p-1">
-                A website developed by me during my internship in nagarnigam to
-                conduct lucky draw in indore. Which generated random winners
-                from the database of nagarnigam replacing the traditional excel
-                system
-              </p>
-              <div className="flex flex-col gap-y-2">
-                <p className="text-white text-left">Developed with:</p>
-                <div className="flex gap-2">
-                  <Tag color="blue">
-                    <p className="text-black font-medium">Next.js</p>
-                  </Tag>
-                  <Tag color="lime">
-                    <p className="text-black font-medium">Nodejs</p>
-                  </Tag>
-                  <Tag color="green">
-                    <p className="text-black font-medium">Mongodb</p>
-                  </Tag>
-                </div>
-              </div>
-              <div className="flex w-full justify-start gap-5 mt-2">
-                <a
-                  href="https://github.com/VinayLodhi1712/IMC-Lucky-Draw"
-                  target="blank"
-                >
-                  {" "}
-                  <button className="projectbtns p-2 rounded-md text-white  flex items-center gap-2">
-                    <FaGithub />
-                    Github
                   </button>
                 </a>
               </div>

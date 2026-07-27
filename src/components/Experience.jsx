@@ -15,6 +15,9 @@ import hack from "../assets/experienceimages/hack.jpg";
 import Imccertificate from "../assets/experienceimages/Imccertificate.jpg";
 import Gssoc from "../assets/experienceimages/girlscriptsoc_logo.jpeg";
 import gssoccert from "../assets/experienceimages/gssoc.jpg";
+import stepup from "../assets/experienceimages/stepup.png";
+import freecodecamp from "../assets/experienceimages/freecodecamp.png";
+import iips from "../assets/experienceimages/iips.svg";
 import { FaCode } from "react-icons/fa6";
 
 const Experience = () => {
@@ -31,7 +34,7 @@ const Experience = () => {
 
   return (
     <div
-      className="flex flex-col justify-center items-center gap-y-5"
+      className="flex flex-col justify-center items-center gap-y-5 px-2 sm:px-4 overflow-x-hidden"
       id="Experience"
     >
       <p className="text-3xl text-white font-bold mt-5">
@@ -39,26 +42,88 @@ const Experience = () => {
       </p>
 
       <VerticalTimeline>
+        {/* StepUp Analytics */}
+        <VerticalTimelineElement
+          className="vertical-timeline-element--work"
+          contentStyle={{ background: "transparent", color: "#fff" }}
+          contentArrowStyle={{ borderRight: "7px solid  #8721da" }}
+          date="June 2025 – Present"
+          icon={
+            <img
+              src={stepup}
+              className="rounded-full w-full h-full object-cover bg-white"
+              alt="StepUp Analytics"
+            />
+          }
+        >
+          <h3 className="vertical-timeline-element-title font-bold">
+            Full Stack Developer
+          </h3>
+
+          <h4 className="vertical-timeline-element-subtitle">
+            StepUp Analytics · Remote, Netherlands
+          </h4>
+
+          <p>
+            Built the full admin panel for stepupanalytics.com — lead
+            extraction, blog, review, and project management with JWT-secured
+            login — and contributed to the public-facing website UI.
+          </p>
+          <p>
+            Engineered high-performance React.js frontends across 7 client
+            sites (Lighthouse 95+), implemented multilingual routing for SEO,
+            introduced caching (~50% faster data retrieval), shared AWS SES
+            email service, and automated CI/CD with GitHub Actions (~70% faster
+            deploys) via Nginx on DigitalOcean.
+          </p>
+          <p className="text-sm opacity-80">
+            Key domains: stepupanalytics.com, 0900dentist.com, hasibo.nl,
+            belqees.nl, maidicare.nl, hiddencourtyard.nl
+          </p>
+          <div className="flex mt-1 items-center gap-1 flex-wrap">
+            <Tag
+              color="#cd201f"
+              icon={<FaCode />}
+              className="flex items-center gap-1"
+            >
+              Skills:
+            </Tag>
+            <Tag color="blue">React.js</Tag>
+            <Tag color="lime">Node.js</Tag>
+            <Tag color="green">MongoDB</Tag>
+            <Tag color="orange">AWS SES</Tag>
+            <Tag color="cyan">CI/CD</Tag>
+            <Tag color="purple">Nginx</Tag>
+          </div>
+          <div className="flex gap-x-4 items-center flex-wrap">
+            <a href="https://stepupanalytics.com" target="blank">
+              <button className="projectbtns p-2 rounded-md text-white font-semibold flex items-center gap-2 mt-4">
+                Visit Website
+              </button>
+            </a>
+          </div>
+        </VerticalTimelineElement>
+
         {/* gssoc */}
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           contentStyle={{ background: "transparent", color: "#fff" }}
           contentArrowStyle={{ borderRight: "7px solid  #8721da" }}
           date="May 2024 - July 2024"
-          icon={<img src={Gssoc} className="rounded-full"></img>}
+          icon={<img src={Gssoc} className="rounded-full" alt="GSSoC"></img>}
         >
           <h3 className="vertical-timeline-element-title font-bold">
-            Open Source Contributor at GSSoC Ext 2024
+            Open Source Contributor — GirlScript Summer of Code
           </h3>
 
           <h4 className="vertical-timeline-element-subtitle">
-            Top Contributor in GirlScript Summer of Code Extended 2024
+            Top Contributor · 128 Merged PRs (4225 points)
           </h4>
 
           <p>
-            I was ranked 13<sup>th</sup> among 4000 developers
+            Ranked among the top contributors with 128 merged pull requests.
+            Also had 4 pull requests merged into the FreeCodeCamp repository.
           </p>
-          {/* tags */}
           <div className="flex mt-1 items-center gap-1 flex-wrap">
             <Tag
               color="#cd201f"
@@ -90,13 +155,62 @@ const Experience = () => {
           </div>
         </VerticalTimelineElement>
 
+        {/* FreeCodeCamp */}
+        <VerticalTimelineElement
+          className="vertical-timeline-element--work"
+          contentStyle={{ background: "transparent", color: "#fff" }}
+          contentArrowStyle={{ borderRight: "7px solid  #8721da" }}
+          date="Open Source"
+          icon={
+            <img
+              src={freecodecamp}
+              className="rounded-full w-full h-full object-cover bg-white"
+              alt="FreeCodeCamp"
+            />
+          }
+        >
+          <h3 className="vertical-timeline-element-title font-bold">
+            FreeCodeCamp Contributor
+          </h3>
+          <h4 className="vertical-timeline-element-subtitle">
+            4 Pull Requests Merged
+          </h4>
+          <p>
+            Contributed to the FreeCodeCamp open source repository with 4 merged
+            pull requests, improving documentation and codebase quality.
+          </p>
+          <div className="flex mt-1 items-center gap-1 flex-wrap">
+            <Tag
+              color="#cd201f"
+              icon={<FaCode />}
+              className="flex items-center gap-1"
+            >
+              Skills:
+            </Tag>
+            <Tag color="orange">Git</Tag>
+            <Tag color="cyan">GitHub</Tag>
+            <Tag color="magenta">Open Source</Tag>
+          </div>
+          <a href="https://github.com/freeCodeCamp/freeCodeCamp" target="blank">
+            <button className="projectbtns p-2 rounded-md text-white font-semibold flex items-center gap-2 mt-4">
+              View Repository
+            </button>
+          </a>
+        </VerticalTimelineElement>
+
         {/* sales queeen  */}
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           contentStyle={{ background: "transparent", color: "#fff" }}
           contentArrowStyle={{ borderRight: "7px solid  #8721da" }}
           date="May 2024 - July 2024"
-          icon={<img src={salesqueen} className="rounded-full"></img>}
+          icon={
+            <img
+              src={salesqueen}
+              className="rounded-full"
+              alt="Salesqueen"
+            ></img>
+          }
         >
           <h3 className="vertical-timeline-element-title font-bold">
             Frontend developer intern
@@ -142,10 +256,16 @@ const Experience = () => {
           contentStyle={{ background: "transparent", color: "#fff" }}
           contentArrowStyle={{ borderRight: "7px solid  #8721da" }}
           date="March 2024"
-          icon={<img src={techhunters} className="rounded-full"></img>}
+          icon={
+            <img
+              src={techhunters}
+              className="rounded-full"
+              alt="Techhunters"
+            ></img>
+          }
         >
           <h3 className="vertical-timeline-element-title font-bold">
-            Hachive Hackathon
+            Hackhive Hackathon
           </h3>
           <h4 className="vertical-timeline-element-subtitle">Techhuntersss</h4>
           <p>
@@ -182,7 +302,7 @@ const Experience = () => {
           contentStyle={{ background: "transparent", color: "#fff" }}
           contentArrowStyle={{ borderRight: "7px solid  #8721da" }}
           date="July 2023 - October 2023"
-          icon={<img src={imc} className="rounded-full"></img>}
+          icon={<img src={imc} className="rounded-full" alt="IMC"></img>}
         >
           <h3 className="vertical-timeline-element-title font-bold">
             Full Stack Developer Intern
@@ -234,7 +354,7 @@ const Experience = () => {
           contentStyle={{ background: "transparent", color: "#fff" }}
           contentArrowStyle={{ borderRight: "7px solid  #8721da" }}
           date="March 2024 - Present"
-          icon={<img src={Aws} className="rounded-full"></img>}
+          icon={<img src={Aws} className="rounded-full" alt="AWS"></img>}
         >
           <h3 className="vertical-timeline-element-title font-bold">
             AWS cloud club (Core team member & Web Developer)
@@ -268,6 +388,31 @@ const Experience = () => {
               LinkedIn post
             </button>
           </a>
+        </VerticalTimelineElement>
+
+        {/* Education */}
+        <VerticalTimelineElement
+          className="vertical-timeline-element--education"
+          contentStyle={{ background: "transparent", color: "#fff" }}
+          contentArrowStyle={{ borderRight: "7px solid  #8721da" }}
+          date="2021 – 2026"
+          icon={
+            <img
+              src={iips}
+              className="rounded-full w-full h-full object-cover"
+              alt="IIPS DAVV"
+            />
+          }
+        >
+          <h3 className="vertical-timeline-element-title font-bold">
+            Integrated Masters of Computer Applications (MCA)
+          </h3>
+          <h4 className="vertical-timeline-element-subtitle">
+            International Institute of Professional Studies, DAVV, Indore
+          </h4>
+          <p>
+            Graduated June 2026 · CGPA: 8.1/10 · Indore, Madhya Pradesh
+          </p>
         </VerticalTimelineElement>
       </VerticalTimeline>
 

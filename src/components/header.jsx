@@ -18,7 +18,7 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 
-import { FaHome } from "react-icons/fa";
+import { FaHome, FaBriefcase } from "react-icons/fa";
 import { IoBarChart } from "react-icons/io5";
 import { FaLaptopCode } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -100,7 +100,7 @@ const Header = () => {
             <div className="text-3xl font-bold text-white">
               Ayush <span className="bluegradient">Sharma</span>
             </div>
-            <div className="w-[60%] flex justify-around mt-2 font-bold cursor-pointer">
+            <div className="w-[65%] lg:w-[60%] flex justify-around mt-2 font-bold cursor-pointer text-sm lg:text-base gap-1 px-1">
               <a
                 onClick={() => {
                   scrollToSection("home");
@@ -127,6 +127,15 @@ const Header = () => {
                 name="projects"
               >
                 Projects
+              </a>
+              <a
+                onClick={() => {
+                  scrollToSection("Experience");
+                  setHash("Experience");
+                }}
+                name="Experience"
+              >
+                Experience
               </a>
               <a
                 onClick={() => {
@@ -251,6 +260,19 @@ const Header = () => {
                   <FaLaptopCode />
                 </ListItemIcon>
                 <ListItemText primary={"Projects"}></ListItemText>
+              </ListItemButton>
+            </ListItem>
+            <ListItem disablePadding>
+              <ListItemButton
+                onClick={() => {
+                  scrollToSection("Experience");
+                  handleDrawerClose();
+                }}
+              >
+                <ListItemIcon>
+                  <FaBriefcase />
+                </ListItemIcon>
+                <ListItemText primary={"Experience"}></ListItemText>
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>

@@ -19,28 +19,32 @@ const Home = () => {
 
   return (
     <div id="home">
-      <div className="h-[650px] w-[100%] px-3 sm:w-[76%] flex m-auto mt-[4.7rem] gap-x-2 sm:gap-0">
-        <div className="flex flex-col gap-y-6 sm:mt-20 mt-[3rem] w-[65%] md:mt-[7rem]">
-          <p className="text-xl text-white font-medium tracking-wide">
+      <div className="min-h-[560px] sm:h-[650px] w-[100%] px-3 sm:w-[76%] flex m-auto mt-[4.7rem] gap-x-2 sm:gap-0 pb-8 sm:pb-0">
+        <div className="flex flex-col gap-y-4 sm:gap-y-6 sm:mt-20 mt-[3rem] w-[65%] md:mt-[7rem]">
+          <p className="text-lg sm:text-xl text-white font-medium tracking-wide">
             Hi, I'm Ayush
           </p>
-          <p className="text-5xl text-white font-bold tracking-normal">
-            <span className="bluegradient">Full-Stack</span> Web Developer
+          <p className="text-3xl sm:text-4xl md:text-5xl text-white font-bold tracking-normal leading-tight">
+            <span className="bluegradient">Full Stack</span> Engineer
           </p>
-          <p className="text-lg graycolor sm:w-[90%] lg:w-2/3">
-            I am passionate Full-Stack Developer. With a strong foundation in
-            both front-end and back-end technologies.
+          <p className="text-sm sm:text-base md:text-lg graycolor sm:w-[90%] lg:w-2/3">
+            Full Stack Engineer and open source developer with 1+ year of
+            experience building React frontends and Node.js/Express backends for
+            production client platforms. Skilled in high-performance,
+            SEO-optimized interfaces, multilingual routing, and REST APIs with
+            JWT authentication — owning features end-to-end with clean,
+            maintainable code.
           </p>
           <div>
             <button
-              className="getintouch p-2 mt-5"
+              className="getintouch p-2 mt-3 sm:mt-5"
               onClick={() => scrollToSection("contact")}
             >
               <span>Get in Touch</span>
             </button>
           </div>
         </div>
-        <div className="sm:h-full sm:w-[35%] sm:mt-0 h-3/4 mt-[3rem] w-[30%]">
+        <div className="sm:h-full sm:w-[35%] sm:mt-0 h-[220px] mt-[3rem] w-[35%] min-w-[110px]">
           <Canvas shadows>
             <ambientLight intensity={1.8} />
             <directionalLight position={[5, 5, 5]} intensity={1} />
